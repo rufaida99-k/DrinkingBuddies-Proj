@@ -1,3 +1,5 @@
+import Button from "react-bootstrap/Button";
+
 const divStyle = {
   margin: "40px",
   height: "70vh",
@@ -16,7 +18,10 @@ const pStyle = {
 
 const HomePage = () => (
   <div style={divStyle}>
-    <p style={pStyle}>Welcome to Drinking Buddies!</p>
+    <p style={pStyle}>Start your personalized quiz!</p>
+    <Button variant="outline-secondary" size="lg">
+      Get Started
+    </Button>{" "}
   </div>
 );
 
