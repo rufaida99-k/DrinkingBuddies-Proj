@@ -16,7 +16,7 @@ const pStyle = {
 
 const HomePage = () => (
   <div style={divStyle}>
-    <p style={pStyle}>Welcome to Drinking Buddies!</p>
+    <p style={pStyle}>Common drinks</p>
   </div>
 );
 
