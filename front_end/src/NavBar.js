@@ -6,7 +6,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 function BasicExample() {
   return (
-    <Navbar bg="light" varient="light" sticky="top">
+    <Navbar bg="light" variant="light" sticky="top">
       <Container>
         <Navbar.Toggle />
         <Nav className="justify-content-center" style={{ width: "100%" }}>

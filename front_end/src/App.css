@@ -1,7 +1,8 @@
 .App {
   text-align: center;
   background-color: #ffe5f4;
-  height: 100vh;
+  /* height: 100vh; */
+  /* overflow-y: scroll; */
   font-family: Chalkduster;
 }
 
