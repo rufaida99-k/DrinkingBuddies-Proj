@@ -29,7 +29,7 @@ export default function HomePage(){
   const [shot,setShot] = useState(0);
   const [hours,setHours] = useState(0);
   
-
+  let clearedBefore = 0;
 
   {/* insert the calculate bac function here */}
   let calcBac = (event) => {
@@ -37,33 +37,61 @@ export default function HomePage(){
     // in case there is no information in the form, it will not submit 
     event.preventDefault();
 
+    //If this is the first time we are clearing inputs, do not display alert message
     // display an alert message in 
-    if ((weight === 0 && sex.length === 0 )&& (wine === 0 && shot === 0 && beer === 0) ){
-      alert('Please fill in values');
+    if (!clearedBefore === 0) {
+      if ((weight === 0 && sex.length === 0 )&& (wine === 0 && shot === 0 && beer === 0) ){
+        alert('Please fill in values');
+      }
     }
+    
     else{
 
       // alcohol percentage 
-      let wineAlcohol = .6;
-      let shotAlcohol = .6;
-      let beerAlcohol = .54;
+      let wineAlcohol = (5 * 0.12);
+      let shotAlcohol = (1.5 * 0.40);
+      let beerAlcohol = (12 * 0.05);
 
       // calculate alcohol based on how much time has passed 
       let hourRate = 0.015;
 
       // the rate at which blood will absorb alcohol based on your weight 
-      let absorptionRate = 7.5;
+      let absorptionRate = 5.14;
 
-      // calculation 
+      //calculate based on sex
+      let R = 0.0;
+      
+      if (sex === 'M') {
+        R = 0.68;
+      }
 
-      let drinkTotal = ((beer * beerAlcohol) + (wine * wineAlcohol) + (shot * shotAlcohol));
-      let total = (drinkTotal * absorptionRate);
-      let result = ((total) / (weight) - (hours*hourRate));
-      setBAC(result);
+      if (sex === 'F') {
+        R = 0.55;
+      }
 
       
+      let drinkTotal = ((beer * beerAlcohol) + (wine * wineAlcohol) + (shot * shotAlcohol));
+      let total = (drinkTotal * absorptionRate);
+      let result = ((total) / (weight * R)) - (hourRate * hours);
+      
+      setBAC(result.toFixed(2));
+
     }
 
+
+  }
+
+  const clearForm = () => {
+		setSex('');
+    setWeight(0);
+    
+    setMessage('');
+    setBeer(0);
+    setWine(0);
+    setShot(0);
+    setHours(0);
+    setBAC(0);
+    clearedBefore++;
 
   }
 
@@ -72,13 +100,14 @@ export default function HomePage(){
     
     <div style = {divStyle}>
       <p style = {pStyle}>
-        <div className = 'Homepage'> 
+        <br></br>
+        <div className = 'HomePage'> 
 
-          <div className= 'container'> 
+          <div className= 'calculator'> 
 
             <h2 className = 'center'> BAC calculator</h2>
 
-            <form onSubmit = {calcBac}>
+            <form onSubmit={calcBac}>
 
               <div>
                 <label> Sex (F/M)</label>
@@ -106,21 +135,21 @@ export default function HomePage(){
               </div>
 
               <div>
-                <label> When was your last drink in hours? </label>
+                <label> How many hours have passed since your first drink? </label>
                 <input value = {hours} onChange = {(event) => setHours(event.target.value)}/>
               </div>
 
               <div>
-                <button id = 'submit' type = 'submit'> Calculate</button>
+                <button id = "calculate" type = "submit"> Calculate</button>
                 <p> </p>
-                <button id = 'clear' type = 'submit'> Clear </button>
+                <button onClick={() => clearForm()} id = "clear"> Clear     </button>
 
               </div>
 
             </form>
 
             <div className = 'center'>
-              <h4> Your BAC is: {BAC}</h4>
+              <h4> Your BAC % is: {BAC}</h4>
             </div>
 
           </div>
