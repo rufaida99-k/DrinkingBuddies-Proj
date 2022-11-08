@@ -10,11 +10,13 @@ const divStyle = {
   alignItems: "center",
   justifyContent: "center",
 };
+
 const pStyle = {
   fontSize: "100px",
   textAlign: "center",
   fontFamily: "Chalkduster",
 };
+
 
 const HomePage = () => (
   <div style={divStyle}>
