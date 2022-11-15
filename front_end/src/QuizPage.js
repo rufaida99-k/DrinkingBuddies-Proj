@@ -1,10 +1,8 @@
 import Button from "react-bootstrap/Button";
+import React, {useState} from "react";
+import "./quiz.css";
 
 const divStyle = {
-  margin: "40px",
-  height: "70vh",
- 
-  backgroundColor: "pink",
   display: "flex",
   flexWrap: "wrap",
   alignItems: "center",
@@ -17,228 +15,114 @@ const pStyle = {
   fontFamily: "Chalkduster",
 };
 
-export default function HomePage() {
+
+
+export default function HomePage(){
+
+  const [displayResults, setDisplayResults] = useState(false);
+  const [currQuestion, setCurrQuestion] = useState(0);
+  
+  const questions = [
+    {
+      text: "What is the capital of America?",
+      options: [
+        { id: 0, text: "New York City", isCorrect: false },
+        { id: 1, text: "Boston", isCorrect: false },
+        { id: 2, text: "Santa Fe", isCorrect: false },
+        { id: 3, text: "Washington DC", isCorrect: true },
+      ],
+    },
+    {
+      text: "What year was the Constitution of America written?",
+      options: [
+        { id: 0, text: "1787", isCorrect: true },
+        { id: 1, text: "1776", isCorrect: false },
+        { id: 2, text: "1774", isCorrect: false },
+        { id: 3, text: "1826", isCorrect: false },
+      ],
+    },
+    {
+      text: "Who was the second president of the US?",
+      options: [
+        { id: 0, text: "John Adams", isCorrect: true },
+        { id: 1, text: "Paul Revere", isCorrect: false },
+        { id: 2, text: "Thomas Jefferson", isCorrect: false },
+        { id: 3, text: "Benjamin Franklin", isCorrect: false },
+      ],
+    },
+    {
+      text: "What is the largest state in the US?",
+      options: [
+        { id: 0, text: "California", isCorrect: false },
+        { id: 1, text: "Alaska", isCorrect: true },
+        { id: 2, text: "Texas", isCorrect: false },
+        { id: 3, text: "Montana", isCorrect: false },
+      ],
+    },
+    {
+      text: "Which of the following countries DO NOT border the US?",
+      options: [
+        { id: 0, text: "Canada", isCorrect: false },
+        { id: 1, text: "Russia", isCorrect: true },
+        { id: 2, text: "Cuba", isCorrect: true },
+        { id: 3, text: "Mexico", isCorrect: false },
+      ],
+    },
+  ];
+
+  // helper functions 
+
+  /* A possible answer was clicked */
+  const optionClick = (isCorrect) => {
+   
+    if (currQuestion + 1 < questions.length) {
+      setCurrQuestion(currQuestion + 1);
+    } else {
+      setDisplayResults(true);
+    }
+      
+ 
+    
+  };
+
+
+
+
+
   return(
     <div style={divStyle}>
-      
-      <p> 
-      <br>
-      </br>
-      {/* add all the divs  */}
-      <div id = "quizzie">
-        {/* title of the quiz */}
-        <h1> What should you drink?</h1>
-        
-            {/* question 1 with choices  */}
-            <ul class="quiz-step step1 current">
-              <li class="question">
-                  <div class="question-wrap">
-                      <h2> You have one choice, sweet or bitter?</h2>
-                  </div>
-              </li>
-              <li class="quiz-answer low-value" data-quizIndex="2">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">sweet</p>
-                  </div>
-              </li>
-              <li class="quiz-answer high-value" data-quizIndex="4">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">bitter</p>
-                  </div>
-              </li>
-            </ul>
+      <p style={pStyle}>
 
-            {/* question 2 with choices  
-            <ul class="quiz-q q1 current">
-              <li class="question">
-                  <div class="question-wrap">
-                      <h2> Do you like coffee?</h2>
-                  </div>
-              </li>
-              <li class="quiz-answer low-value" data-quizIndex="2">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">yes</p>
-                  </div>
-              </li>
-              <li class="quiz-answer high-value" data-quizIndex="4">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">no</p>
-                  </div>
-              </li>
-            </ul>
-            */}
+        {/* Title of the quiz */}
+        <h1> Drinking Buddy Quiz </h1>
+        {displayResults ?  
+          <div className = 'results' >
+            <h2> Drinking Results: </h2>
+           </div> :  
 
-            {/* question 3 with choices  
-            <ul class="quiz-q q1 current">
-              <li class="question">
-                  <div class="question-wrap">
-                      <h2> How do you feel about olives?</h2>
-                  </div>
-              </li>
-              <li class="quiz-answer low-value" data-quizIndex="2">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">I love them</p>
-                  </div>
-              </li>
-              <li class="quiz-answer high-value" data-quizIndex="4">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">I hate them</p>
-                  </div>
-              </li>
-            </ul>
-            */}
+        <div className = 'question-container'> 
+          <h2 className = 'question-number'> Question {currQuestion + 1} </h2>
+          <h3 className = 'question-quest'> {questions[currQuestion].text}</h3>
+          <ul>
+          
+            {questions[currQuestion].options.map((option) => {
+              return (
+                <li onClick = { () => optionClick(option.isCorrect) }key = {option.id}> {option.text} </li>
 
-            {/* question 4 with choices  */}
-            <ul class="quiz-q q1 current">
-              <li class="question">
-                  <div class="question-wrap">
-                      <h2> Are you drinking alone or at a party?</h2>
-                  </div>
-              </li>
-              <li class="quiz-answer low-value" data-quizIndex="2">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">alone</p>
-                  </div>
-              </li>
-              <li class="quiz-answer high-value" data-quizIndex="4">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">party</p>
-                  </div>
-              </li>
-            </ul>
+              );
 
-            {/* question 5 with choices  */}
-            <ul class="quiz-q q1 current">
-              <li class="question">
-                  <div class="question-wrap">
-                      <h2> Do you like slushies?</h2>
-                  </div>
-              </li>
-              <li class="quiz-answer low-value" data-quizIndex="2">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">yes</p>
-                  </div>
-              </li>
-              <li class="quiz-answer high-value" data-quizIndex="4">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">no</p>
-                  </div>
-              </li>
-            </ul>
 
-            {/* question 6 with choices  */}
-            <ul class="quiz-q q1 current">
-              <li class="question">
-                  <div class="question-wrap">
-                      <h2> Are we fruity or no?</h2>
-                  </div>
-              </li>
-              <li class="quiz-answer low-value" data-quizIndex="2">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">yes</p>
-                  </div>
-              </li>
-              <li class="quiz-answer high-value" data-quizIndex="4">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">no</p>
-                  </div>
-              </li>
-            </ul>
+            })}
+            
+            
+          </ul> 
 
-            {/* question 7 with choices  
-            <ul class="quiz-q q1 current">
-              <li class="question">
-                  <div class="question-wrap">
-                      <h2> Do you like bubbles?</h2>
-                  </div>
-              </li>
-              <li class="quiz-answer low-value" data-quizIndex="2">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">yes</p>
-                  </div>
-              </li>
-              <li class="quiz-answer high-value" data-quizIndex="4">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">no</p>
-                  </div>
-              </li>
-            </ul>
-            */}
+        </div> }
 
-            {/* question 8 with choices  
-            <ul class="quiz-q q1 current">
-              <li class="question">
-                  <div class="question-wrap">
-                      <h2> Do you like red bull?</h2>
-                  </div>
-              </li>
-              <li class="quiz-answer low-value" data-quizIndex="2">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">yes</p>
-                  </div>
-              </li>
-              <li class="quiz-answer high-value" data-quizIndex="4">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">no</p>
-                  </div>
-              </li>
-            </ul> */}
-
-          {/* question 9 with choices  
-            <ul class="quiz-q q1 current">
-              <li class="question">
-                  <div class="question-wrap">
-                      <h2> Is it manhattan or nowhere?</h2>
-                  </div>
-              </li>
-              <li class="quiz-answer low-value" data-quizIndex="2">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">manhattan</p>
-                  </div>
-              </li>
-              <li class="quiz-answer high-value" data-quizIndex="4">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">nowhere</p>
-                  </div>
-              </li>
-            </ul>
-            */}
-
-            {/* question 10 with choices  */}
-            <ul class="quiz-q q1 current">
-              <li class="question">
-                  <div class="question-wrap">
-                      <h2> Do you like leaves?</h2>
-                  </div>
-              </li>
-              <li class="quiz-answer low-value" data-quizIndex="2">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">yes</p>
-                  </div>
-              </li>
-              <li class="quiz-answer high-value" data-quizIndex="4">
-                  <div class="answer-wrap"> 
-                      <p class="answer-text">no</p>
-                  </div>
-              </li>
-            </ul>
-
-          <ul id="results">
-            <li class="results-inner">
-                <p>Your drink is:</p>
-                <h1></h1>
-                <p class="desc"></p>
-            </li>
-        </ul>
-        
-
-      </div>
-      
+       
 
       </p>
-      
     
-      
     
     </div>
  );
