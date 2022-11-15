@@ -25,12 +25,22 @@ async function GetCocktails(type) {
   return finalResults;
 }
 
+async function GetCocktailsInfo(type) {
+  let url =
+    "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
+    type +
+    "&limit=1&namespace=0&format=json";
+  let result = await axios({ method: "get", url: url, withCredientals: false });
+  return result.data[3][0];
+}
+
 const divStyle = {
-  margin: "20px",
-  height: "85vh",
-  border: "15px solid #fda0d8",
+  margin: "10px",
+  height: "80vh",
+
+  border: "5px solid #fda0d8",
   backgroundColor: "pink",
-  width: "50vh",
+  width: "90vh",
 };
 const pStyle = {
   margin: "5px",
@@ -49,18 +59,19 @@ const buttonStyle = {
   fontFamily: "Chalkduster",
   fontSize: "10px",
   border: "2px solid #fda0d8",
-  marginTop: "200px",
+  marginTop: "150px",
 };
 
 const carouselStyle = {
-  margin: "10px",
-  border: "3px solid #fda0d8",
+  border: "2px solid #fda0d8",
   borderRadius: "10px",
+  height: "45vh",
+  margin: "10px",
 };
 
 const imgStyle = {
-  width: "120px",
-  height: "140px",
+  width: "100px",
+  height: "120px",
 };
 
 function Example(content) {
@@ -102,40 +113,76 @@ function Item(props) {
 }
 
 const CompiledPage = () => {
-  const { data: data1 } = useQuery(["cocktaildb", "vodka"], async () => {
+  const { data: vodka } = useQuery(["cocktaildb", "vodka"], async () => {
     return GetCocktails("vodka");
   });
 
-  const { data: data2 } = useQuery(["cocktaildb", "gin"], async () => {
+  const { data: vodka_wiki } = useQuery(["wiki", "vodka_wiki"], async () => {
+    return GetCocktailsInfo("vodka");
+  });
+
+  const { data: gin } = useQuery(["cocktaildb", "gin"], async () => {
     return GetCocktails("gin");
   });
 
-  const { data: data3 } = useQuery(["cocktaildb", "tequila"], async () => {
+  const { data: gin_wiki } = useQuery(["wiki", "gin"], async () => {
+    return GetCocktailsInfo("gin");
+  });
+
+  const { data: tequila } = useQuery(["cocktaildb", "tequila"], async () => {
     return GetCocktails("tequila");
   });
 
-  const { data: data4 } = useQuery(["cocktaildb", "whiskey"], async () => {
+  const { data: tequila_wiki } = useQuery(["wiki", "tequila"], async () => {
+    return GetCocktailsInfo("tequila");
+  });
+
+  const { data: whiskey } = useQuery(["cocktaildb", "whiskey"], async () => {
     return GetCocktails("whiskey");
   });
 
-  const { data: data5 } = useQuery(["cocktaildb", "rum"], async () => {
+  const { data: whiskey_wiki } = useQuery(["wiki", "whiskey"], async () => {
+    return GetCocktailsInfo("whiskey");
+  });
+
+  const { data: rum } = useQuery(["cocktaildb", "rum"], async () => {
     return GetCocktails("rum");
   });
 
-  const { data: data6 } = useQuery(["cocktaildb", "beer"], async () => {
+  const { data: rum_wiki } = useQuery(["wiki", "rum"], async () => {
+    return GetCocktailsInfo("rum");
+  });
+
+  const { data: beer } = useQuery(["cocktaildb", "beer"], async () => {
     return GetCocktails("beer");
   });
 
-  const { data: data7 } = useQuery(["cocktaildb", "scotch"], async () => {
+  const { data: beer_wiki } = useQuery(["wiki", "beer"], async () => {
+    return GetCocktailsInfo("beer");
+  });
+
+  const { data: scotch } = useQuery(["cocktaildb", "scotch"], async () => {
     return GetCocktails("scotch");
   });
 
-  const { data: data8 } = useQuery(["cocktaildb", "ale"], async () => {
+  const { data: scotch_wiki } = useQuery(["wiki", "scotch"], async () => {
+    return GetCocktailsInfo("scotch");
+  });
+
+  const { data: ale } = useQuery(["cocktaildb", "ale"], async () => {
     return GetCocktails("ale");
   });
 
-  const { data: data9 } = useQuery(["cocktaildb", "vermouth"], async () => {
+  const { data: ale_wiki } = useQuery(["wiki", "ale"], async () => {
+    return GetCocktailsInfo("ale");
+  });
+
+  const { data: vermouth } = useQuery(["cocktaildb", "vermouth"], async () => {
     return GetCocktails("vermouth");
+  });
+
+  const { data: vermouth_wiki } = useQuery(["wiki", "vermouth"], async () => {
+    return GetCocktailsInfo("vermouth");
   });
 
   return (
@@ -143,31 +190,44 @@ const CompiledPage = () => {
       <div style={pageStyle}>
         <div style={divStyle}>
           <br />
-          <h1> Vodka Drinks </h1>
+          <h1> Vodka </h1>
+
+          <div style={carouselStyle}>{Example(vodka ?? [])}</div>
           <br />
-          <div style={carouselStyle}>{Example(data1 ?? [])}</div>
           <hr />
-          <Button as="a" variant="outline-secondary" size="lg" href="#started">
+          <Button
+            as="a"
+            variant="outline-secondary"
+            size="lg"
+            href={vodka_wiki}
+          >
             Learn More
           </Button>
         </div>
         <div style={divStyle}>
           <br />
-          <h1> Gin Drinks </h1>
+          <h1> Gin </h1>
+          <div style={carouselStyle}>{Example(gin ?? [])}</div>
           <br />
-          <div style={carouselStyle}>{Example(data2 ?? [])}</div>
+
           <hr />
-          <Button as="a" variant="outline-secondary" size="lg" href="#started">
+          <Button as="a" variant="outline-secondary" size="lg" href={gin_wiki}>
             Learn more{" "}
           </Button>
         </div>
         <div style={divStyle}>
           <br />
-          <h1> Tequila Drinks </h1>
+          <h1> Tequila </h1>
+          <div style={carouselStyle}>{Example(tequila ?? [])}</div>
           <br />
-          <div style={carouselStyle}>{Example(data3 ?? [])}</div>
+
           <hr />
-          <Button as="a" variant="outline-secondary" size="lg" href="#started">
+          <Button
+            as="a"
+            variant="outline-secondary"
+            size="lg"
+            href={tequila_wiki}
+          >
             Learn More
           </Button>
         </div>
@@ -175,31 +235,39 @@ const CompiledPage = () => {
       <div style={pageStyle}>
         <div style={divStyle}>
           <br />
-          <h1> Whiskey Drinks </h1>
+          <h1> Whiskey </h1>
+          <div style={carouselStyle}>{Example(whiskey ?? [])}</div>
           <br />
-          <div style={carouselStyle}>{Example(data4 ?? [])}</div>
+
           <hr />
-          <Button as="a" variant="outline-secondary" size="lg" href="#started">
+          <Button
+            as="a"
+            variant="outline-secondary"
+            size="lg"
+            href={whiskey_wiki}
+          >
             Learn More
           </Button>
         </div>
         <div style={divStyle}>
           <br />
-          <h1> Rum Drinks </h1>
+          <h1> Rum </h1>
+          <div style={carouselStyle}>{Example(rum ?? [])}</div>
           <br />
-          <div style={carouselStyle}>{Example(data5 ?? [])}</div>
+
           <hr />
-          <Button as="a" variant="outline-secondary" size="lg" href="#started">
+          <Button as="a" variant="outline-secondary" size="lg" href={rum_wiki}>
             Learn more{" "}
           </Button>
         </div>
         <div style={divStyle}>
           <br />
-          <h1> Beer Drinks </h1>
+          <h1> Beer </h1>
+          <div style={carouselStyle}>{Example(beer ?? [])}</div>
           <br />
-          <div style={carouselStyle}>{Example(data6 ?? [])}</div>
+
           <hr />
-          <Button as="a" variant="outline-secondary" size="lg" href="#started">
+          <Button as="a" variant="outline-secondary" size="lg" href={beer_wiki}>
             Learn More
           </Button>
         </div>
@@ -207,31 +275,45 @@ const CompiledPage = () => {
       <div style={pageStyle}>
         <div style={divStyle}>
           <br />
-          <h1> Scotch Drinks </h1>
+          <h1> Scotch </h1>
+          <div style={carouselStyle}>{Example(scotch ?? [])}</div>
+
           <br />
-          <div style={carouselStyle}>{Example(data7 ?? [])}</div>
           <hr />
-          <Button as="a" variant="outline-secondary" size="lg" href="#started">
+          <Button
+            as="a"
+            variant="outline-secondary"
+            size="lg"
+            href={scotch_wiki}
+          >
             Learn More
           </Button>
         </div>
         <div style={divStyle}>
           <br />
-          <h1> Ale Drinks </h1>
+          <h1> Ale </h1>
+
+          <div style={carouselStyle}>{Example(ale ?? [])}</div>
           <br />
-          <div style={carouselStyle}>{Example(data8 ?? [])}</div>
           <hr />
-          <Button as="a" variant="outline-secondary" size="lg" href="#started">
+          <Button as="a" variant="outline-secondary" size="lg" href={ale_wiki}>
             Learn more{" "}
           </Button>
         </div>
         <div style={divStyle}>
           <br />
-          <h1> Vermouth Drinks </h1>
+          <h1> Vermouth </h1>
+
+          <div style={carouselStyle}>{Example(vermouth ?? [])}</div>
           <br />
-          <div style={carouselStyle}>{Example(data9 ?? [])}</div>
+
           <hr />
-          <Button as="a" variant="outline-secondary" size="lg" href="#started">
+          <Button
+            as="a"
+            variant="outline-secondary"
+            size="sm"
+            href={vermouth_wiki}
+          >
             Learn More
           </Button>
         </div>
