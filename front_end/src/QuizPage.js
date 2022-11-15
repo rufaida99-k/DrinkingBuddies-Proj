@@ -1,21 +1,21 @@
-import Button from "react-bootstrap/Button";
+// import Button from "react-bootstrap/Button";
 import React, {useState} from "react";
 import "./quiz.css";
 
 const divStyle = {
-  display: "flex",
   flexWrap: "wrap",
   alignItems: "center",
   justifyContent: "center",
+  backgroundColor: "#22277A",
+  height: "95vh",
+
 };
 
-const pStyle = {
-  fontSize: "100px",
-  textAlign: "center",
-  fontFamily: "Chalkduster",
+const manhattanDrink = require("./img/ManhattanDrink.png");
+const drinkStyle = {
+  width: "250px",
+  height: "250px",
 };
-
-
 
 export default function HomePage(){
 
@@ -24,48 +24,50 @@ export default function HomePage(){
   
   const questions = [
     {
-      text: "What is the capital of America?",
+      text: "What Do You Prefer: Sweet Or Bitter?",
       options: [
-        { id: 0, text: "New York City", isCorrect: false },
-        { id: 1, text: "Boston", isCorrect: false },
-        { id: 2, text: "Santa Fe", isCorrect: false },
-        { id: 3, text: "Washington DC", isCorrect: true },
+        { id: 0, text: "Sweet", isCorrect: false },
+        { id: 1, text: "Bitter", isCorrect: false },
+        { id: 2, text: "Sweet & Bitter", isCorrect: false },
+        { id: 3, text: "Neither", isCorrect: true },
       ],
     },
     {
-      text: "What year was the Constitution of America written?",
+      text: "Do You Like Slushies?",
       options: [
-        { id: 0, text: "1787", isCorrect: true },
-        { id: 1, text: "1776", isCorrect: false },
-        { id: 2, text: "1774", isCorrect: false },
-        { id: 3, text: "1826", isCorrect: false },
+        { id: 0, text: "Yes, Absolutely!", isCorrect: true },
+        { id: 1, text: "No, What Is Wrong With You?", isCorrect: false },
+        { id: 2, text: "Only In The Summer", isCorrect: false },
+        { id: 3, text: "Maybe, Depends On The Day", isCorrect: false },
       ],
     },
     {
-      text: "Who was the second president of the US?",
+      text: "Do You Like Leaves?",
       options: [
-        { id: 0, text: "John Adams", isCorrect: true },
-        { id: 1, text: "Paul Revere", isCorrect: false },
-        { id: 2, text: "Thomas Jefferson", isCorrect: false },
-        { id: 3, text: "Benjamin Franklin", isCorrect: false },
+        { id: 0, text: "Yes (For Garnish)", isCorrect: true},
+        { id: 1, text: "Nope, I'll Pass", isCorrect: false },
       ],
     },
     {
-      text: "What is the largest state in the US?",
+      text: "Are We Fruity Or Nah?",
       options: [
-        { id: 0, text: "California", isCorrect: false },
-        { id: 1, text: "Alaska", isCorrect: true },
-        { id: 2, text: "Texas", isCorrect: false },
-        { id: 3, text: "Montana", isCorrect: false },
+        { id: 0, text: "I'd Never Pass On A Tart Cherry", isCorrect: true },
+        { id: 1, text: "No Thank You Berry Much ", isCorrect: false },
+        { id: 2, text: "I Find Them Ap-peeling Sometimes", isCorrect: false },
       ],
     },
     {
-      text: "Which of the following countries DO NOT border the US?",
+      text: "Are You Drinking Alone Or At A Party?",
       options: [
-        { id: 0, text: "Canada", isCorrect: false },
-        { id: 1, text: "Russia", isCorrect: true },
-        { id: 2, text: "Cuba", isCorrect: true },
-        { id: 3, text: "Mexico", isCorrect: false },
+        { id: 0, text: "Alone", isCorrect: false },
+        { id: 1, text: "Party", isCorrect: true },
+      ],
+    },
+    {
+      text: "Is It New York Or Nowhere?",
+      options: [
+        { id: 0, text: "Yes, New York Is Always On My Mind", isCorrect: true},
+        { id: 1, text: "No, Anywhere But Here", isCorrect: false },
       ],
     },
   ];
@@ -91,13 +93,17 @@ export default function HomePage(){
 
   return(
     <div style={divStyle}>
-      <p style={pStyle}>
+      
 
         {/* Title of the quiz */}
-        <h1> Drinking Buddy Quiz </h1>
+        <h1 id="Heading1"> Drinking Buddy Quiz </h1>
         {displayResults ?  
           <div className = 'results' >
-            <h2> Drinking Results: </h2>
+            <h2 id="Heading2"> Drinking Results: Manhattan</h2>
+            <h3 id = "Heading3"> This is a classic cocktail of choice for whiskey-lovers. 
+              This delightful mix of rye or bourbon whiskey, sweet vermouth, and bitters has been adored for hundreds of years because of its subtle bitterness and herbal undertones.
+              </h3><img style={drinkStyle} src={manhattanDrink} />
+
            </div> :  
 
         <div className = 'question-container'> 
@@ -121,7 +127,7 @@ export default function HomePage(){
 
        
 
-      </p>
+      
     
     
     </div>
