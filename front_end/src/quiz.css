@@ -64,10 +64,18 @@ li{
     padding-right: 35px;
     padding-top: 30px;
     padding-bottom: 30px;
-    border: 1px solid white;
-    border-radius: 16px;
+    border: 1px solid #B9BFFF;
+    border-radius: 30px;
     font-size: 25px;
     margin-top: 8px;
+
+}
+
+li:hover {
+    background-color: #CEC2FF;
+    border: 1px solid #B9BFFF;
+    color: #3c096c;
+    transition-duration: 600ms;
 
 }
  .question-number{
