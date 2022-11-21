@@ -1,9 +1,9 @@
 .App {
   text-align: center;
-  background-color: #ffe5f4;
+  background-color: white;
   /* height: 100vh; */
   /* overflow-y: scroll; */
-  font-family: Chalkduster;
+  font-family: "Garamond",
 }
 
 .App-logo {
@@ -25,6 +25,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: Garamond;
 }
 
 .App-link {

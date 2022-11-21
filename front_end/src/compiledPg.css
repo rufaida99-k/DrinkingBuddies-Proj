@@ -1,0 +1,25 @@
+
+#buttonStyle {
+    font-family: "Chalkduster";
+    font-size: 15px;
+    background-color: #240046;
+    border-color: #240046;;
+    margin-top: 170px;
+}
+
+#buttonStyle:hover {
+    background-color: #5a189a;
+    border-color: #5a189a;
+    opacity: 1.1;
+}
+
+#buttonStyle:active {
+    background-color: #a663cc;
+    border-color: #a663cc;
+    color: black;
+    opacity: 0.9;
+}
+
+.buttonStyle.rec-dot {
+    background-color: red;
+}
