@@ -15,7 +15,6 @@ function BasicExample() {
           <Nav.Link href="/about">About</Nav.Link>
           <Nav.Link href="/quiz">Quiz</Nav.Link>
           <Nav.Link href="/list">Compiled List</Nav.Link>
-          <Nav.Link href="/meet">Meet Up</Nav.Link>
           <Nav.Link href="/places">Places Near Me</Nav.Link>
           <Nav.Link href="/bac">BAC Calculator</Nav.Link>
           <Nav.Link href="/faq">FAQ</Nav.Link>
