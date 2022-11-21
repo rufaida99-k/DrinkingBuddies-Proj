@@ -1,109 +1,111 @@
-@import url('https://fonts.googleapis.com/css2?family=Prociono&family=Sorts+Mill+Goudy&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Prociono&family=Sorts+Mill+Goudy&display=swap");
 
 @font-face {
-  	font-family: 'Goudy Bookletter 1911';
-  	font-style: normal;
-  	font-weight: 400;
-  	src: url(https://fonts.gstatic.com/s/goudybookletter1911/v13/sykt-z54laciWfKv-kX8krex0jDiD2HbY6IJshzW.woff2) format('woff2');
-  	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, 	U+2215, U+FEFF, U+FFFD;
+  font-family: "Goudy Bookletter 1911";
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/goudybookletter1911/v13/sykt-z54laciWfKv-kX8krex0jDiD2HbY6IJshzW.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }
 
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-
-#Heading1, #Heading2, #Heading3 {
-    font-family: 'Goudy Bookletter 1911';
+#Heading1,
+#Heading2,
+#Heading3 {
+  font-family: "Goudy Bookletter 1911";
 }
 
 #Heading1 {
-    padding-top: 2%;
-    padding-bottom: 2%;
-    color: white;
-    font-weight: bold;
-    font-size: 60px;
-    
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: white;
+  font-weight: bold;
+  font-size: 60px;
 }
 
 #Heading2 {
-
-    font-size: 45px;
-    padding-bottom: 10px;
-    
+  font-size: 45px;
+  padding-bottom: 10px;
 }
 
-.question-container{
-    font-family: 'Goudy Bookletter 1911';
-    margin: 0 auto;
-    justify-content: center;
-    padding-top: 15px;
-    background-color: #B9BFFF;
-    border-radius: 16px;
-    color:white;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0,0,0,0.3) 0px 18px 36px -18px;
-    width: 95%;
-    height: 700px;
+.question-container {
+  font-family: "Goudy Bookletter 1911";
+  margin: 0 auto;
+  justify-content: center;
+  padding-top: 15px;
+  background-color: #b9bfff;
+  border-radius: 16px;
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  width: 95%;
+  height: 50%;
+  display: table; /* Allow the centering to work */
 }
 
-ul{
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    display: inline-block;
-}
+li {
+  background-color: #8b74bd;
 
-li{
-    background-color: #8B74BD;
-    
-    padding-left: 35px;
-    padding-right: 35px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    border: 1px solid #B9BFFF;
-    border-radius: 30px;
-    font-size: 25px;
-    margin-top: 8px;
-
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid #b9bfff;
+  border-radius: 30px;
+  font-size: 25px;
+  margin-top: 8px;
 }
 
 li:hover {
-    background-color: #CEC2FF;
-    border: 1px solid #B9BFFF;
-    color: #3c096c;
-    transition-duration: 600ms;
-
+  background-color: #cec2ff;
+  border: 1px solid #b9bfff;
+  color: #3c096c;
+  transition-duration: 600ms;
 }
- .question-number{
-     color: #663399;
-     font-size: 50px;
-     font-weight: bold;
-     
- }
- .question-quest{
-     color: darkblue;
-     font-size: 40px;;
-     padding: 30px;
- }
+.question-number {
+  color: #663399;
+  font-size: 50px;
+  font-weight: bold;
+}
+.question-quest {
+  color: darkblue;
+  font-size: 40px;
+  padding: 30px;
+}
 
- .results{
-    margin: 0 auto;
-    background-color: #B9BFFF;
-    padding:120px;
-    border-radius: 16px;
-    color:#070D59;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0,0,0,0.3) 0px 18px 36px -18px;
-    width: 75%;
-    height: auto;
-    
+.results {
+  margin: 0 auto;
+  background-color: #b9bfff;
+  padding: 100px;
+  border-radius: 16px;
+  color: #070d59;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  width: 75%;
+  height: 75%;
+}
 
- }
- /* button {
-    background-color: red; 
+ul#horizontal {
+  /* min-width: 696px; */
+  list-style: none;
+  padding-top: 20px;
+}
+
+ul#horizontal li {
+  display: inline;
+  margin: 10px;
+}
+
+/* button {
+    background-color: red;
     border: none;
     color: white;
     padding: 16px 24px;
@@ -113,4 +115,3 @@ li:hover {
     font-size: 16px;
     font-weight: bold;
   } */
-  
