@@ -1,4 +1,5 @@
 import "./App.css";
+// import React, { Component } from 'react';
 import NavBar from "./NavBar.js";
 import HomePage from "./HomePage.js";
 import AboutPage from "./AboutPage.js";

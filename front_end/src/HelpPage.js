@@ -1,7 +1,8 @@
+// import React, { Component } from 'react';
 import Button from "react-bootstrap/Button";
 
 const SINGLE_PAGE = "calc(100vh - 3.25rem)";
-const aboutUs = require("./img/aboutUs2.png");
+// const aboutUs = require("./img/aboutUs2.png");
 
 const divStyle = {
   border: "15px solid #fda0d8",
@@ -34,9 +35,9 @@ const p2Style = {
   padding: "30px",
 };
 
-const imgStyle = {
-  width: "300px",
-};
+// const imgStyle = {
+//   width: "300px",
+// };
 
 const HomePage = () => (
   <div style={{ display: "flex", flexDirection: "column" }}>

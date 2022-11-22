@@ -11,10 +11,10 @@ const divStyle = {
   height: "90vh",
 };
 
-const manhattanDrink = require("./img/ManhattanDrink.png");
+// const manhattanDrink = require("./img/ManhattanDrink.png");
 const drinkStyle = {
-  width: "150px",
-  height: "150px",
+  width: "256px",
+  height: "256px",
 };
 
 const drinks = {
@@ -56,7 +56,7 @@ export default function HomePage() {
         {
           id: 1,
           text: "In Between",
-          drinks: ["old_fashioned", "gin_and_tonic"],
+          drinks: ["old_fashioned", "gin_and_tonic","margarita"],
         },
         { id: 2, text: "Light", drinks: ["daiquiri"] },
       ],
@@ -72,7 +72,7 @@ export default function HomePage() {
         {
           id: 1,
           text: "Some milk and sugar",
-          drinks: ["old_fashioned", "daiquiri"],
+          drinks: ["old_fashioned", "daiquiri","margarita"],
         },
         { id: 2, text: "Lots of milk and sugar", drinks: ["cosmopolitan"] },
       ],
@@ -84,7 +84,7 @@ export default function HomePage() {
         {
           id: 0,
           text: "I'd Never Pass On A Tart Cherry",
-          drinks: ["daiquiri", "cosmopolitan"],
+          drinks: ["daiquiri", "cosmopolitan","margarita"],
         },
         { id: 1, text: "No Thank You Berry Much ", drinks: ["manhattan"] },
         {
@@ -103,7 +103,7 @@ export default function HomePage() {
           drinks: ["manhattan", "cosmopolitan", "old_fashioned", "daiquiri"],
         },
         { id: 1, text: "Leaves", drinks: ["manhattan", "gin_and_tonic"] },
-        { id: 2, text: "Salty Rim", drinks: [] },
+        { id: 2, text: "Salty Rim", drinks: ["margarita"] },
       ],
     },
     {
@@ -114,7 +114,7 @@ export default function HomePage() {
           text: "Yes, New York Is Always On My Mind",
           drinks: ["manhattan"],
         },
-        ,
+        
         {
           id: 1,
           text: "No, Anywhere But Here",
@@ -123,6 +123,7 @@ export default function HomePage() {
             "old_fashioned",
             "daiquiri",
             "gin_and_tonic",
+            "margarita",
           ],
         },
       ],
@@ -151,7 +152,7 @@ export default function HomePage() {
         <div className="results">
           <h2 id="Heading2"> {drinkingResultDrink}</h2>
           <h3 id="Heading3"> {drinkingResultDescription}</h3>
-          <img style={drinkStyle} src={drinkingResultImg} />
+          <img style={drinkStyle} ALT="Drink" src={drinkingResultImg} />
           <hr />
           <Button as="a" variant="outline-secondary" size="lg" href="/list">
             Learn More
