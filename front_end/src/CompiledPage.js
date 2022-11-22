@@ -1,3 +1,4 @@
+// import React, { Component } from 'react';
 import Carousel from "react-material-ui-carousel";
 // import { Paper } from "@mui/material";
 import Button from "react-bootstrap/Button";

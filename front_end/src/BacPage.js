@@ -17,7 +17,7 @@ export default function HomePage() {
   const [sex, setSex] = useState("");
   const [weight, setWeight] = useState(0);
   const [BAC, setBAC] = useState(0);
-  const [message, setMessage] = useState("");
+  // const [message, setMessage] = useState("");
   const [beer, setBeer] = useState(0);
   const [wine, setWine] = useState(0);
   const [shot, setShot] = useState(0);
@@ -25,9 +25,9 @@ export default function HomePage() {
 
   let clearedBefore = 0;
 
-  {
+  
     /* insert the calculate bac function here */
-  }
+  
   let calcBac = (event) => {
     // in case there is no information in the form, it will not submit
     event.preventDefault();
@@ -83,7 +83,7 @@ export default function HomePage() {
     setSex("");
     setWeight(0);
 
-    setMessage("");
+    // setMessage("");
     setBeer(0);
     setWine(0);
     setShot(0);

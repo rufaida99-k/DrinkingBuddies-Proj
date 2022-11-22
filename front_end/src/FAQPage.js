@@ -1,3 +1,4 @@
+// import React, { Component } from 'react';
 import Button from "react-bootstrap/Button";
 
 const SINGLE_PAGE = "calc(100vh - 3.25rem)";

@@ -1,3 +1,6 @@
+
+// import React, { Component } from 'react';
+
 const divStyle = {
   margin: "40px",
   height: "70vh",

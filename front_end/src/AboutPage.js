@@ -1,4 +1,6 @@
+// import React, { Component } from 'react';
 import Button from "react-bootstrap/Button";
+
 
 const SINGLE_PAGE = "calc(100vh - 3.25rem)";
 const aboutUs = require("./img/aboutUs2.png");
@@ -73,7 +75,7 @@ const HomePage = () => (
           especially as a new drinker. So we wanted to find a solution to this
           embarrassing and honestly unhealthy situation.
         </p>
-        <img style={imgStyle} src={aboutUs} />
+        <img style={imgStyle} alt="About Us" src={aboutUs} />
       </div>
       <div id="started"></div>
     </div>
