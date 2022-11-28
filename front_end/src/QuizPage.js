@@ -13,8 +13,8 @@ const divStyle = {
 
 // const manhattanDrink = require("./img/ManhattanDrink.png");
 const drinkStyle = {
-  width: "256px",
-  height: "256px",
+  width: "128px",
+  height: "128px",
 };
 
 const drinks = {
