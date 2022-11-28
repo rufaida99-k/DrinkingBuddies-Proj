@@ -1,10 +1,10 @@
 
-const manhattan = require("./img/drinks/manhattan.png");
-const cosmopolitan = require("./img/drinks/cocktail.png");
-const old_fashioned = require("./img/drinks/old-fashioned.png");
-const margarita = require("./img/drinks/margarita.png");
-const daiquiri = require("./img/drinks/daiquiri.png");
-const gin_and_tonic = require("./img/drinks/gin-tonic.png");
+const manhattan = require("./img/drinks/128px/manhattan.png");
+const cosmopolitan = require("./img/drinks/128px/cocktail.png");
+const old_fashioned = require("./img/drinks/128px/old-fashioned.png");
+const margarita = require("./img/drinks/128px/margarita.png");
+const daiquiri = require("./img/drinks/128px/daiquiri.png");
+const gin_and_tonic = require("./img/drinks/128px/gin-tonic.png");
 
 
 const DrinkData = {
