@@ -96,3 +96,10 @@ input{
 p{
     margin: 10px 0;
 }
+.BAC-img{
+    text-align: center;
+}
+.BAC-img img{
+    height: 225px;
+
+}
