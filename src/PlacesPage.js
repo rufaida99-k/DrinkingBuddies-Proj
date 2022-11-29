@@ -9,7 +9,7 @@ import Button from "@mui/material/Button";
 const divStyle = {
   margin: "15px",
   width: "70vh",
-  height: "65vh",
+  height: "55vh",
   borderRadius: "20px",
   borderColor: "#d2b7e5",
   fontFamily: "Garamond",
@@ -30,9 +30,10 @@ const pageStyle = {
 };
 
 const carouselStyle = {
-  border: "1px solid #e5d9f2",
+  border: "10px solid #e5d9f2",
+  padding: "10px",
   borderRadius: "10px",
-  height: "45vh",
+  height: "40vh",
   margin: "10px",
 };
 
@@ -41,8 +42,11 @@ const h1Style = {
 };
 
 const imgStyle = {
-  width: "120px",
-  height: "120px",
+  width: "100px",
+  height: "100px",
+  border: "5px solid black",
+  borderRadius: "10px",
+  padding: "10px",
 };
 
 function App() {
@@ -76,6 +80,7 @@ function App() {
         <h2>{props["place"].name}</h2>
         <p> Address: {props["place"].address} </p>
         <p> Rating: {props["place"].rating}</p>
+        <img style={imgStyle} alt="Icon" src={props["place"].icon} />
 
         <br />
       </div>
@@ -101,6 +106,7 @@ function App() {
             name: results[i]["name"],
             address: results[i]["formatted_address"],
             rating: results[i]["rating"],
+            icon: results[i]["icon"],
           });
         }
         setPlaces(placesArray);
@@ -116,6 +122,7 @@ function App() {
   return (
     <>
       <div style={pageStyle} className="App">
+        <br />
         <form onSubmit={handleSubmit}>
           <h4>Enter Your Zipcode Below To Find Bars Near You!</h4>
           <br />
@@ -132,11 +139,10 @@ function App() {
 
           {places != "" && (
             <div style={divStyle}>
+              <br />
               <h1 style={h1Style}> Places Near You </h1>
 
               <div style={carouselStyle}>{Example(places ?? [])}</div>
-              <br />
-              <hr />
             </div>
           )}
         </form>
