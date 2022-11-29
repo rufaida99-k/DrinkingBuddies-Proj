@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button";
 import React, { useState } from "react";
 import "./quiz.css";
 import DrinkData from "./QuizData.js";
+import { Link } from "react-router-dom";
 
 const divStyle = {
   flexWrap: "wrap",
@@ -56,7 +57,7 @@ export default function HomePage() {
         {
           id: 1,
           text: "In Between",
-          drinks: ["old_fashioned", "gin_and_tonic","margarita"],
+          drinks: ["old_fashioned", "gin_and_tonic", "margarita"],
         },
         { id: 2, text: "Light", drinks: ["daiquiri"] },
       ],
@@ -72,7 +73,7 @@ export default function HomePage() {
         {
           id: 1,
           text: "Some milk and sugar",
-          drinks: ["old_fashioned", "daiquiri","margarita"],
+          drinks: ["old_fashioned", "daiquiri", "margarita"],
         },
         { id: 2, text: "Lots of milk and sugar", drinks: ["cosmopolitan"] },
       ],
@@ -84,7 +85,7 @@ export default function HomePage() {
         {
           id: 0,
           text: "I'd Never Pass On A Tart Cherry",
-          drinks: ["daiquiri", "cosmopolitan","margarita"],
+          drinks: ["daiquiri", "cosmopolitan", "margarita"],
         },
         { id: 1, text: "No Thank You Berry Much ", drinks: ["manhattan"] },
         {
@@ -114,7 +115,7 @@ export default function HomePage() {
           text: "Yes, New York Is Always On My Mind",
           drinks: ["manhattan"],
         },
-        
+
         {
           id: 1,
           text: "No, Anywhere But Here",
@@ -154,12 +155,16 @@ export default function HomePage() {
           <h3 id="Heading3"> {drinkingResultDescription}</h3>
           <img style={drinkStyle} ALT="Drink" src={drinkingResultImg} />
           <hr />
-          <Button as="a" variant="outline-secondary" size="lg" href="/list">
-            Learn More
+          <Button as="a" variant="outline-secondary" size="lg">
+            <Link className="text-link" to="/list">
+              Learn More
+            </Link>
           </Button>
           {"  "}
-          <Button as="a" variant="outline-secondary" size="lg" href="/quiz">
-            Try Again
+          <Button as="a" variant="outline-secondary" size="lg">
+            <Link className="text-link" to="/list">
+              Try Again
+            </Link>
           </Button>
         </div>
       ) : (

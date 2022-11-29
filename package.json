@@ -1,7 +1,7 @@
 {
   "name": "DrinkingBuddies-Proj",
   "version": "0.1.0",
-  "homepage": "https://tangym27.github.io/drinking-buddies",
+  "homepage": "https://tangym27.github.io/DrinkingBuddies-Proj",
   "private": true,
   "dependencies": {
     "@mui/icons-material": "^5.10.9",

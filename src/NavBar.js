@@ -1,10 +1,10 @@
-
 // import React, { Component } from 'react';
 import "./App.css";
 
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { HashRouter, Route, Link } from "react-router-dom";
 
 function BasicExample() {
   return (
@@ -12,15 +12,27 @@ function BasicExample() {
       <Container>
         <Navbar.Toggle />
         <Nav className="justify-content-center" style={{ width: "100%" }}>
-          <Nav.Link href="/">Home</Nav.Link>
-
-          <Nav.Link href="/about">About</Nav.Link>
-          <Nav.Link href="/quiz">Quiz</Nav.Link>
-          <Nav.Link href="/list">Compiled List</Nav.Link>
-          <Nav.Link href="/places">Places Near Me</Nav.Link>
-          <Nav.Link href="/bac">BAC Calculator</Nav.Link>
-          <Nav.Link href="/faq">FAQ</Nav.Link>
-          <Nav.Link href="/help">Help Center</Nav.Link>
+          <Link className="text-link" to="/">
+            Home
+          </Link>
+          <Link className="text-link" to="/quiz">
+            Quiz
+          </Link>
+          <Link className="text-link" to="/list">
+            Compiled List
+          </Link>
+          <Link className="text-link" to="/places">
+            Places Near Me
+          </Link>
+          <Link className="text-link" to="/bac">
+            BAC Calculator
+          </Link>
+          <Link className="text-link" to="/faq">
+            FAQ
+          </Link>
+          <Link className="text-link" to="/help">
+            Help Center
+          </Link>
         </Nav>
       </Container>
     </Navbar>

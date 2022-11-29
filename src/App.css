@@ -3,7 +3,7 @@
   background-color: white;
   /* height: 100vh; */
   /* overflow-y: scroll; */
-  font-family: "Garamond",
+  font-family: "Garamond";
 }
 
 .App-logo {
@@ -39,4 +39,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.text-link {
+  color: inherit;
+  text-decoration: inherit;
+  padding: 10px;
 }

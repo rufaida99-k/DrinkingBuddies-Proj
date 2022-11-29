@@ -45,11 +45,6 @@ const HomePage = () => (
       <div style={divStyle}>
         <p style={pStyle}> Help Center!</p>
         <hr />
-
-
-        <Button as="a" variant="outline-secondary" size="lg" href="#started">
-          Get Started
-        </Button>
       </div>
     </div>
 
@@ -66,9 +61,15 @@ const HomePage = () => (
       <div style={divStyle}>
         <p style={p2Style}>
           {" "}
-          Feel like you might have an unhealthy relationship with drinking alcohol?
-          Reach out to the SAMSHA 24 hours a day, 7 day a week, 365 days a year help center.
-          SAMHSA’s National Helpline, 1-800-662-HELP (4357) (also known as the Treatment Referral Routing Service), or TTY: 1-800-487-4889 is a confidential, free, information service, in English and Spanish, for individuals and family members facing mental and/or substance use disorders. This service provides referrals to local treatment facilities, support groups, and community-based organizations.
+          Feel like you might have an unhealthy relationship with drinking
+          alcohol? Reach out to the SAMSHA 24 hours a day, 7 day a week, 365
+          days a year help center. SAMHSA’s National Helpline, 1-800-662-HELP
+          (4357) (also known as the Treatment Referral Routing Service), or TTY:
+          1-800-487-4889 is a confidential, free, information service, in
+          English and Spanish, for individuals and family members facing mental
+          and/or substance use disorders. This service provides referrals to
+          local treatment facilities, support groups, and community-based
+          organizations.
         </p>
       </div>
       <div id="started"></div>
