@@ -103,7 +103,7 @@ function App() {
       console.log(placesArray)
       if (res.status === 200) {
         for (var i = 0; i < results.length; i++) {
-          placesArray.push({'name': results[i]['name'], 'address': results[i]['address'], 'rating': results[i]['rating']})
+          placesArray.push({'name': results[i]['name'], 'address': results[i]['formatted_address'], 'rating': results[i]['rating']})
         }
         setPlaces(placesArray)
         console.log(placesArray)
