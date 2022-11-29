@@ -1,7 +1,6 @@
 // import React, { Component } from 'react';
 import Button from "react-bootstrap/Button";
 
-
 const SINGLE_PAGE = "calc(100vh - 3.25rem)";
 const aboutUs = require("./img/aboutUs2.png");
 
@@ -45,9 +44,6 @@ const HomePage = () => (
       <div style={divStyle}>
         <p style={pStyle}> About Drinking Buddies!</p>
         <hr />
-        <Button as="a" variant="outline-secondary" size="lg" href="#started">
-          Get Started
-        </Button>
       </div>
     </div>
 

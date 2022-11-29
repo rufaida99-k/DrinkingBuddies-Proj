@@ -61,9 +61,6 @@ const HomePage = () => (
       <div style={divStyle}>
         <p style={pStyle}> Frequently Asked Questions!</p>
         <hr />
-        <Button as="a" variant="outline-secondary" size="lg" href="#started">
-          Get Started
-        </Button>
       </div>
     </div>
 

@@ -25,9 +25,8 @@ export default function HomePage() {
 
   let clearedBefore = 0;
 
-  
-    /* insert the calculate bac function here */
-  
+  /* insert the calculate bac function here */
+
   let calcBac = (event) => {
     // in case there is no information in the form, it will not submit
     event.preventDefault();
@@ -77,61 +76,64 @@ export default function HomePage() {
       }
       setBAC(result.toFixed(2));
 
-      // logic for BAC message 
-      if (result === 0.00){
-        setMessage("You are currently sober.")
+      // logic for BAC message
+      if (result === 0.0) {
+        setMessage("You are currently sober.");
+      } else if (result > 0.0 && result < 0.02) {
+        setMessage("You are currently sober.");
       }
-      else if (result > 0.00 && result< 0.02){
-        setMessage("You are currently sober.")
-        
-      } 
-      // image name: toasting.jpg 
-      else if (result >= 0.02 && result < 0.04 ){
-        setMessage("You should be feeling relaxed, no loss of coordination, slight euphoria, and slight loss of judgment. Note at this moment, you are legally able to drive but don’t if you are not feeling well.")
-    
+      // image name: toasting.jpg
+      else if (result >= 0.02 && result < 0.04) {
+        setMessage(
+          "You should be feeling relaxed, no loss of coordination, slight euphoria, and slight loss of judgment. Note at this moment, you are legally able to drive but don’t if you are not feeling well."
+        );
       }
       // image name: womenDancing.jpg
-      else if (result >= 0.04 && result < 0.06){
-        setMessage("You may feel uninhibited, relaxed, and euphoric. Also, you may experience minor impairments in reasoning and memory and may experience heightened emotions. Lastly, you may have lower alertness and may have some exaggerated behaviors. Note at this moment, you are legally able to drive but don’t if you are not feeling well.")
-    
-      } 
+      else if (result >= 0.04 && result < 0.06) {
+        setMessage(
+          "You may feel uninhibited, relaxed, and euphoric. Also, you may experience minor impairments in reasoning and memory and may experience heightened emotions. Lastly, you may have lower alertness and may have some exaggerated behaviors. Note at this moment, you are legally able to drive but don’t if you are not feeling well."
+        );
+      }
       // image name: starryHead.jpg
-      else if (result>= 0.06 && result < 0.10){
-        setMessage("You may have slight impairment of balance, speech, vision, reaction time and hearing. Your judgment, self-control, sense of caution, reasoning, and memory are impaired. You may feel euphoric and also believe that you are functioning much better than you actually are. Note if your BAC is 0.08% and above, you are legally intoxicated and cannot be driving.")
-
-    
+      else if (result >= 0.06 && result < 0.1) {
+        setMessage(
+          "You may have slight impairment of balance, speech, vision, reaction time and hearing. Your judgment, self-control, sense of caution, reasoning, and memory are impaired. You may feel euphoric and also believe that you are functioning much better than you actually are. Note if your BAC is 0.08% and above, you are legally intoxicated and cannot be driving."
+        );
       }
       // image name: stage-5.jpg
-      else if (result >= 0.10 && result < 0.12){
-        setMessage("You may have significant impairment of motor coordination and loss of good judgment. Speech may be slurred; balance, peripheral vision, reaction time, and hearing will be impaired. Note you are legally intoxicated and cannot be driving.")
-        
+      else if (result >= 0.1 && result < 0.12) {
+        setMessage(
+          "You may have significant impairment of motor coordination and loss of good judgment. Speech may be slurred; balance, peripheral vision, reaction time, and hearing will be impaired. Note you are legally intoxicated and cannot be driving."
+        );
       }
       // image name: hangover.jpg
-      else if (result>= 0.12 && result < 0.16){
-        setMessage("You may have gross motor impairment and lack of physical control. Blurred vision and major loss of balance. Euphoria is reducing and beginning dysphoria (a state of feeling unwell). Note you are legally intoxicated and cannot be driving.")
-        
+      else if (result >= 0.12 && result < 0.16) {
+        setMessage(
+          "You may have gross motor impairment and lack of physical control. Blurred vision and major loss of balance. Euphoria is reducing and beginning dysphoria (a state of feeling unwell). Note you are legally intoxicated and cannot be driving."
+        );
       }
       // image name: sloppy drunk
-      else if (result >= 0.16 && result < 0.20){
-        setMessage("Dysphoria predominates, nausea may appear. You may have the appearance of a sloppy drunk. Note you are legally intoxicated and cannot be driving.")
-        
+      else if (result >= 0.16 && result < 0.2) {
+        setMessage(
+          "Dysphoria predominates, nausea may appear. You may have the appearance of a sloppy drunk. Note you are legally intoxicated and cannot be driving."
+        );
       }
       // image name: needs assistance
-      else if (result >= 0.20 && result< 0.25){
-        setMessage("At this point, you may need assistance in walking and have total mental confusion. You may have Dysphoria with nausea and vomiting; possible blackout. Note you are legally intoxicated and cannot be driving.")
-        
+      else if (result >= 0.2 && result < 0.25) {
+        setMessage(
+          "At this point, you may need assistance in walking and have total mental confusion. You may have Dysphoria with nausea and vomiting; possible blackout. Note you are legally intoxicated and cannot be driving."
+        );
       }
       // image name: passed out drunk
-      else if (result >= 0.25 && result < 0.40){
-        setMessage("Alcohol poisoning. Loss of consciousness.")
-        
+      else if (result >= 0.25 && result < 0.4) {
+        setMessage("Alcohol poisoning. Loss of consciousness.");
       }
       // image name: coma with death
-      else if (result >= 0.40 ){
-        setMessage("Onset of coma, and possible death due to respiratory arrest.rently sober.")
-        
+      else if (result >= 0.4) {
+        setMessage(
+          "Onset of coma, and possible death due to respiratory arrest."
+        );
       }
-
     }
   };
 
@@ -150,61 +152,48 @@ export default function HomePage() {
 
   // display images based on BAC levels
   let imgSrc;
-  // image name: noDrinkingWomen.jpg 
-  if (BAC === 0.00){
+  // image name: noDrinkingWomen.jpg
+  if (BAC === 0.0) {
     imgSrc = null;
-  }
-  else if (BAC > 0.00 && BAC < 0.02){
+  } else if (BAC > 0.0 && BAC < 0.02) {
     imgSrc = require("./BAC-Images/noDrinkingWomen.jpg");
-    
-  } 
-  // image name: toasting.jpg 
-  else if (BAC >= 0.02 && BAC < 0.04 ){
+  }
+  // image name: toasting.jpg
+  else if (BAC >= 0.02 && BAC < 0.04) {
     imgSrc = require("./BAC-Images/toasting.jpg");
-
   }
   // image name: womenDancing.jpg
-  else if (BAC >= 0.04 && BAC < 0.06){
+  else if (BAC >= 0.04 && BAC < 0.06) {
     imgSrc = require("./BAC-Images/womenDancing.jpg");
-
-  } 
+  }
   // image name: starryHead.jpg
-  else if (BAC >= 0.06 && BAC < 0.10){
+  else if (BAC >= 0.06 && BAC < 0.1) {
     imgSrc = require("./BAC-Images/starryHead.jpg");
-
   }
   // image name: stage-5.jpg
-  else if (BAC >= 0.10 && BAC < 0.12){
+  else if (BAC >= 0.1 && BAC < 0.12) {
     imgSrc = require("./BAC-Images/stage5.jpg");
-    
   }
   // image name: hangover.jpg
-  else if (BAC >= 0.12 && BAC < 0.16){
+  else if (BAC >= 0.12 && BAC < 0.16) {
     imgSrc = require("./BAC-Images/hangover.jpg");
-    
   }
   // image name: sloppy drunk
-  else if (BAC >= 0.16 && BAC < 0.20){
+  else if (BAC >= 0.16 && BAC < 0.2) {
     imgSrc = require("./BAC-Images/sloppyDrunk.jpg");
-    
   }
   // image name: needs assistance
-  else if (BAC >= 0.20 && BAC < 0.25){
+  else if (BAC >= 0.2 && BAC < 0.25) {
     imgSrc = require("./BAC-Images/needsAssistance.jpg");
-    
   }
   // image name: passed out drunk
-  else if (BAC >= 0.25 && BAC < 0.40){
+  else if (BAC >= 0.25 && BAC < 0.4) {
     imgSrc = require("./BAC-Images/passedOutDrunk.jpg");
-    
   }
   // image name: coma with death
-  else if (BAC >= 0.40 ){
+  else if (BAC >= 0.4) {
     imgSrc = require("./BAC-Images/comaWithDeath.jpg");
-
-    
   }
-
 
   return (
     <div style={divStyle}>
@@ -283,8 +272,8 @@ export default function HomePage() {
               <h4> Your BAC is: {BAC} %</h4>
               <p> {message} </p>
             </div>
-            <div className="BAC-img"> 
-            <img src={imgSrc} alt=''></img>
+            <div className="BAC-img">
+              <img src={imgSrc} alt=""></img>
             </div>
           </div>
         </div>
