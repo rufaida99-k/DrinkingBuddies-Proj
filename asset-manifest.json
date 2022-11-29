@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/drinking-buddies/static/css/main.ad8afc74.css",
-    "main.js": "/drinking-buddies/static/js/main.778faee6.js",
-    "static/js/787.f5547d80.chunk.js": "/drinking-buddies/static/js/787.f5547d80.chunk.js",
-    "static/media/noDrinkingWomen.jpg": "/drinking-buddies/static/media/noDrinkingWomen.de42d9d9556d506e43f8.jpg",
-    "static/media/hangover.jpg": "/drinking-buddies/static/media/hangover.3627a59760a33ac9fd6b.jpg",
-    "static/media/comaWithDeath.jpg": "/drinking-buddies/static/media/comaWithDeath.9c827f9785a2eee3fe76.jpg",
-    "static/media/passedOutDrunk.jpg": "/drinking-buddies/static/media/passedOutDrunk.e3837f2d02696a6e5213.jpg",
-    "static/media/starryHead.jpg": "/drinking-buddies/static/media/starryHead.eea0c2e25b814f257022.jpg",
-    "static/media/womenDancing.jpg": "/drinking-buddies/static/media/womenDancing.df4c208276a6ee861fff.jpg",
-    "static/media/needsAssistance.jpg": "/drinking-buddies/static/media/needsAssistance.036790e5a5046827a470.jpg",
-    "static/media/sloppyDrunk.jpg": "/drinking-buddies/static/media/sloppyDrunk.0e8a58e802005c066bcc.jpg",
-    "static/media/toasting.jpg": "/drinking-buddies/static/media/toasting.552b443c624148e60c61.jpg",
-    "static/media/aboutUs2.png": "/drinking-buddies/static/media/aboutUs2.6c9427d4719af07991d2.png",
-    "static/media/stage5.jpg": "/drinking-buddies/static/media/stage5.b93a6835eb21eeaca8db.jpg",
-    "index.html": "/drinking-buddies/index.html",
-    "main.ad8afc74.css.map": "/drinking-buddies/static/css/main.ad8afc74.css.map",
-    "main.778faee6.js.map": "/drinking-buddies/static/js/main.778faee6.js.map",
-    "787.f5547d80.chunk.js.map": "/drinking-buddies/static/js/787.f5547d80.chunk.js.map"
+    "main.css": "/DrinkingBuddies-Proj/static/css/main.ad8afc74.css",
+    "main.js": "/DrinkingBuddies-Proj/static/js/main.724a1585.js",
+    "static/js/787.f5547d80.chunk.js": "/DrinkingBuddies-Proj/static/js/787.f5547d80.chunk.js",
+    "static/media/noDrinkingWomen.jpg": "/DrinkingBuddies-Proj/static/media/noDrinkingWomen.de42d9d9556d506e43f8.jpg",
+    "static/media/hangover.jpg": "/DrinkingBuddies-Proj/static/media/hangover.3627a59760a33ac9fd6b.jpg",
+    "static/media/comaWithDeath.jpg": "/DrinkingBuddies-Proj/static/media/comaWithDeath.9c827f9785a2eee3fe76.jpg",
+    "static/media/passedOutDrunk.jpg": "/DrinkingBuddies-Proj/static/media/passedOutDrunk.e3837f2d02696a6e5213.jpg",
+    "static/media/starryHead.jpg": "/DrinkingBuddies-Proj/static/media/starryHead.eea0c2e25b814f257022.jpg",
+    "static/media/womenDancing.jpg": "/DrinkingBuddies-Proj/static/media/womenDancing.df4c208276a6ee861fff.jpg",
+    "static/media/needsAssistance.jpg": "/DrinkingBuddies-Proj/static/media/needsAssistance.036790e5a5046827a470.jpg",
+    "static/media/sloppyDrunk.jpg": "/DrinkingBuddies-Proj/static/media/sloppyDrunk.0e8a58e802005c066bcc.jpg",
+    "static/media/toasting.jpg": "/DrinkingBuddies-Proj/static/media/toasting.552b443c624148e60c61.jpg",
+    "static/media/aboutUs2.png": "/DrinkingBuddies-Proj/static/media/aboutUs2.6c9427d4719af07991d2.png",
+    "static/media/stage5.jpg": "/DrinkingBuddies-Proj/static/media/stage5.b93a6835eb21eeaca8db.jpg",
+    "index.html": "/DrinkingBuddies-Proj/index.html",
+    "main.ad8afc74.css.map": "/DrinkingBuddies-Proj/static/css/main.ad8afc74.css.map",
+    "main.724a1585.js.map": "/DrinkingBuddies-Proj/static/js/main.724a1585.js.map",
+    "787.f5547d80.chunk.js.map": "/DrinkingBuddies-Proj/static/js/787.f5547d80.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ad8afc74.css",
-    "static/js/main.778faee6.js"
+    "static/js/main.724a1585.js"
   ]
 }
