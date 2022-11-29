@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/drinking-buddies/static/css/main.ad8afc74.css",
-    "main.js": "/drinking-buddies/static/js/main.b672db13.js",
-    "static/js/787.22edae46.chunk.js": "/drinking-buddies/static/js/787.22edae46.chunk.js",
+    "main.js": "/drinking-buddies/static/js/main.778faee6.js",
+    "static/js/787.f5547d80.chunk.js": "/drinking-buddies/static/js/787.f5547d80.chunk.js",
     "static/media/noDrinkingWomen.jpg": "/drinking-buddies/static/media/noDrinkingWomen.de42d9d9556d506e43f8.jpg",
     "static/media/hangover.jpg": "/drinking-buddies/static/media/hangover.3627a59760a33ac9fd6b.jpg",
     "static/media/comaWithDeath.jpg": "/drinking-buddies/static/media/comaWithDeath.9c827f9785a2eee3fe76.jpg",
@@ -16,11 +16,11 @@
     "static/media/stage5.jpg": "/drinking-buddies/static/media/stage5.b93a6835eb21eeaca8db.jpg",
     "index.html": "/drinking-buddies/index.html",
     "main.ad8afc74.css.map": "/drinking-buddies/static/css/main.ad8afc74.css.map",
-    "main.b672db13.js.map": "/drinking-buddies/static/js/main.b672db13.js.map",
-    "787.22edae46.chunk.js.map": "/drinking-buddies/static/js/787.22edae46.chunk.js.map"
+    "main.778faee6.js.map": "/drinking-buddies/static/js/main.778faee6.js.map",
+    "787.f5547d80.chunk.js.map": "/drinking-buddies/static/js/787.f5547d80.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ad8afc74.css",
-    "static/js/main.b672db13.js"
+    "static/js/main.778faee6.js"
   ]
 }
