@@ -1,0 +1,65 @@
+:root {
+    --primary: #E3D7FF;
+    --secondary: #731963;
+    --dark:#4F0147;
+    --light: #C9EDDC;
+    --batman: rgb(207, 187, 214);
+     
+  }
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}       
+
+.HomePage{
+    display: flex;
+    min-height: 40vh;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    
+}
+.helpButton{
+    display: block;
+
+}
+
+.answer{
+    font-weight: lighter;
+
+}
+.link{
+    display: block;
+    padding: 10px;
+
+}
+.buttonStyle{
+    padding: 10px;
+    height: 80px;
+    width: 300px;
+    border-radius: 0%;
+    background-color: white ;
+    border-color: white;
+
+}
+
+
+.newList{
+    text-align: center;
+    display: inline-block;
+    list-style: square;
+    
+
+
+    
+}
+.newBullet{
+   width: 800px;
+   text-align: left;
+   background-color: white;
+   margin: 30px;
+   
+
+}
