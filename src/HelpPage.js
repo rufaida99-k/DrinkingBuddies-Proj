@@ -19,8 +19,8 @@ const divStyle = {
 const wrapperStyle = {
   padding: "20px",
   boxSizing: "border-box",
-  height: SINGLE_PAGE,
-  maxHeight: SINGLE_PAGE,
+  //height: SINGLE_PAGE,
+  //maxHeight: SINGLE_PAGE,
   backgroundColor: "#E3D7FF",
 
 };
