@@ -16,7 +16,7 @@ const divStyle = {
   justifyContent: "center",
 };
 const pStyle = {
-  fontSize: "100px",
+  fontSize: "80px",
   textAlign: "center",
   fontFamily: "Chalkduster",
 };

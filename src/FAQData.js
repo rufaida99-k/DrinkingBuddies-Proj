@@ -1,3 +1,5 @@
+
+// Data for general questions
 const GeneralData = {
   rows: [
     {
@@ -10,19 +12,36 @@ const GeneralData = {
       content:
         "To enhance sociability, to increase power, to escape problems, to get drunk, for enjoyment, or for ritualistic reasons",
     },
+   
     {
       title: "What's the equivalent of one drink of alcohol?",
       content:
         "In the USA, one drink is equivalent to 14 grams of pure alcohol, which is generally equal to 12 oz of beer, 5 oz of wine, and 1.5 fl oz of a spirit. It may vary depending on the alcohol content of the beverage.!",
     },
     {
+      title: "Is alcohol a drug?",
+      content:
+        "yes, alchol is a drug. In fact, it is one of the most commonly used drug.",
+    },
+    {
       title: "How can I know if I may have a drinking problem?",
       content:
-        "There are many online resources to understand what constitutes a drinking problem. You can take a test here to see if you may have a heavy drinking issue.",
+        "According to Mount Sinai, you may have a drinking problem if you are unable to stop drinking, spend a lot of time drinking, you experience symptoms of withdrawl when you stop drinking, and you can only think about the urge to drink. These are only a few symptoms to figure out if you have a drinking problem, but if you want to learn more information click here.",
+    },
+    {
+      title: "What is binge drinking?",
+      content:
+        "According to the National Institute on Alcohol Abuse and Alcoholism, binge drinking is defined as a pattern of drinking alcohol that brings blood alcohol concentration (BAC) to 0.08 percent—or 0.08 grams of alcohol per deciliter—or higher. ",
+    },
+    {
+      title: "What is Blood Alcohol Concentration (BAC)?",
+      content:
+        "Blood Alcohol Concentration (BAC) refers to the percentage of alcohol in a person's blood stream. For example, if you have a BAC of .10%, this means that an individual's blood supply contains one part alcohol for every 1000 parts blood.",
     },
   ],
 };
 
+// Data for the health questions 
 const HealthData = {
   rows: [
     {
@@ -38,7 +57,7 @@ const HealthData = {
     {
       title: "How can alcohol make me feel?",
       content:
-        "Even though alcohol may make you feel good, it is still a depressant. It will dehydrate you.",
+        "Even though alcohol may make you feel good, it is still a depressant. It will dehydrate you. So make sure you stay hydrated!",
     },
     {
       title: "What are quick ways for me to get sober while drinking?",
@@ -49,9 +68,15 @@ const HealthData = {
       content:
         "The worst thing a severely intoxicated person can do is lie down. If you vomit, you could actually choke and die. If you are with someone who is intoxicated and must lie down, make sure the person is lying on his/her side and his/her head is turned to the side then watch the person closely.",
     },
+    {
+      title: "How do I know if I have alcohol poisoning?",
+      content:
+        "According to the National Institute on Alcohol Abuse and Alcoholism, the symptoms of alcohol overdose include mental confusion, difficulty remaining conscious, vomiting, seizure, trouble breathing, slow heart rate, clammy skin, dulled responses such as no gag reflex (which prevents choking), and extremely low body temperature. Alcohol overdose can lead to permanent brain damage or death.",
+    },
   ],
 };
 
+// Data about drinking practices 
 const DrinkData = {
   rows: [
     {
@@ -80,6 +105,18 @@ const DrinkData = {
         "What does it mean to order a Martini or Manhattan dry, wet, perfect, etc.?",
       content:
         "This refers to the amount of vermouth you want in a Martini or Manhattan. Dry doesn’t mean using dry vermouth—it means using less vermouth. Wet conversely means adding in more vermouth.",
+    },
+    {
+      title:
+        "How long should you shake a cocktail?",
+      content:
+        "You should typically shake a cocktail for at least 10 seconds. ",
+    },
+    {
+      title:
+        "How long should you stir a cocktail?",
+      content:
+        "You should typically stir a cocktail for at least 10 seconds. ",
     },
   ],
 };
