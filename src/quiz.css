@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Prociono&family=Sorts+Mill+Goudy&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Prociono&family=Sorts+Mill+Goudy&display=swap");
 
 @font-face {
   font-family: "Goudy Bookletter 1911";
@@ -48,10 +48,10 @@
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   width: 95%;
   height: 50%;
-  display: table; /* Allow the centering to work */
-}
+  display: table; 
+} */
 
-li {
+/* li {
   background-color: #8b74bd;
 
   padding-left: 35px;
@@ -62,15 +62,15 @@ li {
   border-radius: 30px;
   font-size: 25px;
   margin-top: 8px;
-}
+} */
 
-li:hover {
+/* li:hover {
   background-color: #cec2ff;
   border: 1px solid #b9bfff;
   color: #3c096c;
   transition-duration: 600ms;
-}
-.question-number {
+} */
+/* .question-number {
   color: #663399;
   font-size: 50px;
   font-weight: bold;
@@ -90,11 +90,10 @@ li:hover {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   width: 75%;
-  height: 75%;
-}
+  height: 75%; 
+}*/
 
-ul#horizontal {
-  /* min-width: 696px; */
+/* ul#horizontal {
   list-style: none;
   padding-top: 20px;
 }
@@ -102,4 +101,4 @@ ul#horizontal {
 ul#horizontal li {
   display: inline;
   margin: 10px;
-}
+} */
