@@ -1,28 +1,10 @@
-// import React, { Component } from 'react';
-
-// const divStyle = {
-//   margin: "40px",
-//   height: "70vh",
-//   border: "15px solid #fda0d8",
-//   backgroundColor: "pink",
-//   display: "flex",
-//   flexWrap: "wrap",
-//   alignItems: "center",
-//   justifyContent: "center",
-// };
-// const pStyle = {
-//   fontSize: "100px",
-//   textAlign: "center",
-//   fontFamily: "Chalkduster",
-// };
-
+import "./HomePage.css";
 const HomePage = () => (
-  // <div style={divStyle}>
-    // 
-    <div>
-      <p>
-    Welcome to Drinking Buddies!</p>
-  </div>
+
+    <div className = "header">
+      
+
+    </div>
 );
 
 export default HomePage;
