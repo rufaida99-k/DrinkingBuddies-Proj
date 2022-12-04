@@ -20,6 +20,7 @@ function App() {
       <div className="App">
         <QueryClientProvider client={queryClient}>
           <NavBar> </NavBar>
+    
 
           <Routes>
             <Route path="/" element={<HomePage />} />

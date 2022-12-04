@@ -1,42 +1,47 @@
-// import React, { Component } from 'react';
-import "./App.css";
 
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import { HashRouter, Route, Link } from "react-router-dom";
+import "./NavBar.css";
+import { Link } from "react-router-dom";
 
-function BasicExample() {
+export default function NavBar() {
+
   return (
-    <Navbar bg="light" variant="light" sticky="top">
-      <Container>
-        <Navbar.Toggle />
-        <Nav className="justify-content-center" style={{ width: "100%" }}>
-          <Link className="text-link" to="/">
-            Home
-          </Link>
-          <Link className="text-link" to="/quiz">
-            Quiz
-          </Link>
-          <Link className="text-link" to="/list">
-            Compiled List
-          </Link>
-          <Link className="text-link" to="/places">
-            Places Near Me
-          </Link>
-          <Link className="text-link" to="/bac">
-            BAC Calculator
-          </Link>
-          <Link className="text-link" to="/faq">
-            FAQ
-          </Link>
-          <Link className="text-link" to="/help">
-            Help Center
-          </Link>
-        </Nav>
-      </Container>
-    </Navbar>
+    <nav className="navigationHeader">
+      {/* Icon is clickable and when you click it will redirect you to the homepage */}
+      <Link to="/" className="appName">
+        Drinking Buddies
+      </Link>
+
+      {/* navigation bar header */}
+      <div className="menu" >
+        <ul>
+          <li>
+            <Link className = "linksStyle" to="/">Home</Link>
+          </li>
+          <li>
+             <Link className = "linksStyle" to="/about"> About</Link>
+          </li>
+          <li>
+            <Link className = "linksStyle" to="/quiz"> Quiz </Link>
+          </li>
+          <li>
+              <Link className = "linksStyle" to="/list"> Alcohol</Link>
+          </li>
+          <li>
+            <Link className = "linksStyle" to="/places"> Places Near Me </Link>
+          </li>
+          <li>
+            <Link className = "linksStyle" to="/bac"> BAC Calculator </Link>
+          </li>
+          <li>
+            <Link className = "linksStyle" to="/faq"> FAQ </Link>
+          </li>
+          <li>
+            <Link className = "linksStyle" to="/help"> Help Center</Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }
 
-export default BasicExample;
+

@@ -1,0 +1,68 @@
+
+* {
+  box-sizing: border-box;
+}
+
+/* App Name */
+.appName {
+  text-decoration: none;
+  color: black;
+  font-size: 1.3rem;
+  margin-left: 0.2rem;
+}
+
+.appName:hover {
+  color:white;
+}
+
+.linksStyle{
+  text-decoration: none;
+  color: black;
+}
+
+.linksStyle:hover{
+  text-decoration: underline;
+  color: white;
+}
+
+/* class for the overall navgiation section*/
+.navigationHeader {
+  height: 70px;
+  width: 100%;
+  padding: 0.7rem 0.3rem;
+  box-shadow: 0 1px 2px 2px rgba(9, 9, 9, 0.19);
+  display: flex;
+  align-items: left;
+  position: fixed;
+  background-color: #b2ceff;
+}
+
+.menu{
+  top: 5px;
+  overflow: hidden;
+  margin-left: auto;
+  position: relative ;
+}
+
+.menu li {
+  list-style-type: none;
+  margin: 0 0.5rem;
+}
+
+.menu li Links {
+  display: block;
+  width: 100%;
+}
+
+.menu ul {
+  padding: 0.2rem;
+  display: flex;
+}
+
+
+
+
+
+
+
+
