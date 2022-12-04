@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Prociono&family=Sorts+Mill+Goudy&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Prociono&family=Sorts+Mill+Goudy&display=swap");
 
 @font-face {
   font-family: "Goudy Bookletter 1911";
@@ -48,7 +48,7 @@
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   width: 95%;
   height: 50%;
-  display: table; /* Allow the centering to work */
+  display: table; 
 }
 
 li {
@@ -94,7 +94,6 @@ li:hover {
 }
 
 ul#horizontal {
-  /* min-width: 696px; */
   list-style: none;
   padding-top: 20px;
 }
@@ -102,4 +101,85 @@ ul#horizontal {
 ul#horizontal li {
   display: inline;
   margin: 10px;
+} */
+
+/* REVAMPLED QUIZ CSS */
+
+@font-face {
+  font-family: "Eczar-Medium";
+  src: local("Eczar-Medium"),
+  url("./fonts/Eczar-Medium.ttf") format("truetype");
+}
+
+.main-Quiz {
+  background-color: #fae2f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Eczar-Medium";
+  width: 100vw;
+  padding-bottom: 60vh;
+}
+  
+.blurQuiz {
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.375);
+    box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur( 50px );
+    -webkit-backdrop-filter: blur( 20px );
+    border-radius: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    width: 80%;
+    min-height: max-content;
+}
+.quizHeading1 {     /*Drinking Buddy Quiz*/
+  color: #9C6683;
+  font-weight: bold;
+}
+
+.quizHeading1:hover {     /*Drinking Buddy Quiz*/
+  color: rgb(73, 7, 52);
+  opacity: 0.7;
+}
+
+.questionNumber {   /* Current Question */
+  color: #880661;
+}
+
+.questionContents {   /* Current Question Text */
+  color: #c79800;
+}
+
+.choices {
+  background-color: #B2CEFF;
+  display: inline-flex;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 6px;
+  padding-right: 6px;
+  font-size: larger;
+  border-radius: 10px;
+  cursor:pointer;
+  transition: 500ms;
+}
+
+.choices:hover {
+  background-color: #f7ca38;
+  color: #880661;
+  transition: 500ms;
+}
+
+.choices:active {
+  background-color: #880661;
+  color: white;
+  transition: 500ms;
+}
+
+.quiz-Links {
+  background: rgba(255, 255, 255, 0.375);
+  color: #880661;
 }
