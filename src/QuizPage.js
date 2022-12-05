@@ -1,4 +1,3 @@
-import Button from "react-bootstrap/Button";
 import React, { useState } from "react";
 import "./quiz.css";
 import DrinkData from "./QuizData.js";
@@ -65,8 +64,16 @@ export default function HomePage() {
       text: "Is This A Party Of One Or Many?",
       images: require("./quizImages/question2.png"),
       options: [
-        { id: 0, text: "It's Me, Myself & I", drinks: ["Manhattan", "Old_Fashioned"] },
-        { id: 1, text: "We Are Going All Out Tonight!", drinks: ["Cosmopolitan", "Daiquiri", "Gin_And_Tonic", "Margarita"] },
+        {
+          id: 0,
+          text: "It's Me, Myself & I",
+          drinks: ["Manhattan", "Old_Fashioned"],
+        },
+        {
+          id: 1,
+          text: "We Are Going All Out Tonight!",
+          drinks: ["Cosmopolitan", "Daiquiri", "Gin_And_Tonic", "Margarita"],
+        },
       ],
     },
 
@@ -78,9 +85,13 @@ export default function HomePage() {
         {
           id: 1,
           text: "Sometimes When It's Hot Out",
-          drinks: ["Old_Fashioned", "Manhattan","Cosmopolitan"],
+          drinks: ["Old_Fashioned", "Manhattan", "Cosmopolitan"],
         },
-        { id: 2, text: "No, What Is Wrong With You?", drinks: ["Gin_And_Tonic"] },
+        {
+          id: 2,
+          text: "No, What Is Wrong With You?",
+          drinks: ["Gin_And_Tonic"],
+        },
       ],
     },
 
@@ -177,49 +188,71 @@ export default function HomePage() {
       <br></br>
       <br></br>
       <br></br>
-      <br></br><h1 class="quizHeading1"> Drinking Buddy Quiz </h1><br></br>
+      <br></br>
+      <h1 class="quizHeading1"> Drinking Buddy Quiz </h1>
+      <br></br>
       <div className="blurQuiz" align="center">
-      
-      {displayResults ? (
-        <div className="quizResults" align="center">
-          <h3 className="quizHeading3" align="center"> {drinkingResultDrink}</h3>
-          <br></br><h4 className="blurbText" align="center"> {drinkingResultDescription} </h4>
-          <img style={drinkStyle} align="center" alt="Drink Result" src={drinkingResultImg} />
-          <hr />
-          <div className = "buttonContainerQuiz">
-            <Link className = "quiz-Links"to="/list">
-                <button className = "lastButtons">
-                  Take Quiz
-                </button>
-            </Link> 
-            
-            <Link className = "quiz-Links"to="/quiz">
-                <button className = "lastButtons">
-                  Retry Quiz
-                </button>
-            </Link> 
-          </div>
+        {displayResults ? (
+          <div className="quizResults" align="center">
+            <h3 className="quizHeading3" align="center">
+              {" "}
+              {drinkingResultDrink}
+            </h3>
+            <br></br>
+            <h4 className="blurbText" align="center">
+              {" "}
+              {drinkingResultDescription}{" "}
+            </h4>
+            <img
+              style={drinkStyle}
+              align="center"
+              alt="Drink Result"
+              src={drinkingResultImg}
+            />
+            <hr />
+            <div className="buttonContainerQuiz">
+              <Link className="quiz-Links" to="/list">
+                <button className="lastButtons">Take Quiz</button>
+              </Link>
 
-        </div>
-      ) : (
-        <div className="quizQuestion" align="center">
-          <br></br><h2 className="questionNumber" align="center"> Question {currQuestion + 1} </h2>
-          <br></br><h3 className="questionContents" align="center"> {questions[currQuestion].text}</h3>
-          <img src= {questions[currQuestion].images} alt="Question Associated Icon"></img><br></br>
-          <br></br>
+              <Link className="quiz-Links" to="/quiz">
+                <button className="lastButtons">Retry Quiz</button>
+              </Link>
+            </div>
+          </div>
+        ) : (
+          <div className="quizQuestion" align="center">
+            <br></br>
+            <h2 className="questionNumber" align="center">
+              {" "}
+              Question {currQuestion + 1}{" "}
+            </h2>
+            <br></br>
+            <h3 className="questionContents" align="center">
+              {" "}
+              {questions[currQuestion].text}
+            </h3>
+            <img
+              src={questions[currQuestion].images}
+              alt="Question Associated Icon"
+            ></img>
+            <br></br>
+            <br></br>
             {questions[currQuestion].options.map((option) => {
               return (
-                <p class="choices" onClick={() => optionClick(option)} key={option.id}>
-                  {option.text} 
+                <p
+                  class="choices"
+                  onClick={() => optionClick(option)}
+                  key={option.id}
+                >
+                  {option.text}
                 </p>
               );
             })}
-          
-        </div>
-      )}
+          </div>
+        )}
 
-      <br />
-     
+        <br />
       </div>
     </div>
   );

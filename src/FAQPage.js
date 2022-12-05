@@ -1,5 +1,4 @@
 // import React, { Component } from 'react';
-import Button from "react-bootstrap/Button";
 import Faq from "react-faq-component";
 import { GeneralData, DrinkData, HealthData } from "./FAQData.js";
 
