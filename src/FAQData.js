@@ -1,4 +1,3 @@
-
 // Data for general questions
 const GeneralData = {
   rows: [
@@ -12,7 +11,7 @@ const GeneralData = {
       content:
         "To enhance sociability, to increase power, to escape problems, to get drunk, for enjoyment, or for ritualistic reasons",
     },
-   
+
     {
       title: "What's the equivalent of one drink of alcohol?",
       content:
@@ -41,7 +40,7 @@ const GeneralData = {
   ],
 };
 
-// Data for the health questions 
+// Data for the health questions
 const HealthData = {
   rows: [
     {
@@ -76,7 +75,7 @@ const HealthData = {
   ],
 };
 
-// Data about drinking practices 
+// Data about drinking practices
 const DrinkData = {
   rows: [
     {
@@ -107,16 +106,13 @@ const DrinkData = {
         "This refers to the amount of vermouth you want in a Martini or Manhattan. Dry doesn’t mean using dry vermouth—it means using less vermouth. Wet conversely means adding in more vermouth.",
     },
     {
-      title:
-        "How long should you shake a cocktail?",
+      title: "How long should you shake a cocktail?",
       content:
         "You should typically shake a cocktail for at least 10 seconds. ",
     },
     {
-      title:
-        "How long should you stir a cocktail?",
-      content:
-        "You should typically stir a cocktail for at least 10 seconds. ",
+      title: "How long should you stir a cocktail?",
+      content: "You should typically stir a cocktail for at least 10 seconds. ",
     },
   ],
 };
