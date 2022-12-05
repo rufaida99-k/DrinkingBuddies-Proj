@@ -13,14 +13,14 @@ import "./quizLoader.css";
           <br></br>
           <br></br>
           <div className="quizLoaderAnimation">
-          <img src= {animationSRC} alt="Cutting Board With Alcohol"></img>
+            <img src= {animationSRC} alt="Cutting Board With Alcohol"></img>
           </div>
           <div className="quizLoaderButton">
-              <Button as="a" variant="outline-secondary" size="lg" align="center">
-              <Link className="quiz-Linked" to="/quizStart" align="center">
-                Start Quiz!
-              </Link>
-            </Button>
+              <Link className = "quiz-Linked"to="/quizStart">
+                <button className ="quizLoaderButton-Style" >
+                  Start Quiz
+                </button>
+              </Link> 
           </div>
           </div>
             

@@ -183,20 +183,23 @@ export default function HomePage() {
       {displayResults ? (
         <div className="quizResults" align="center">
           <h3 className="quizHeading3" align="center"> {drinkingResultDrink}</h3>
-          <br></br><h4 className="quizHeading4" align="center"> {drinkingResultDescription} </h4>
+          <br></br><h4 className="blurbText" align="center"> {drinkingResultDescription} </h4>
           <img style={drinkStyle} align="center" alt="Drink Result" src={drinkingResultImg} />
           <hr />
-          <Button as="a" variant="outline-secondary" size="lg">
-            <Link className="quiz-Links" to="/list">
-              Learn More
-            </Link>
-          </Button>
-          {"  "}
-          <Button as="a" variant="outline-secondary" size="lg">
-            <Link className="quiz-Links" to="/quiz"> 
-              Try Again
-            </Link>
-          </Button>
+          <div className = "buttonContainerQuiz">
+            <Link className = "quiz-Links"to="/list">
+                <button className = "lastButtons">
+                  Take Quiz
+                </button>
+            </Link> 
+            
+            <Link className = "quiz-Links"to="/quiz">
+                <button className = "lastButtons">
+                  Retry Quiz
+                </button>
+            </Link> 
+          </div>
+
         </div>
       ) : (
         <div className="quizQuestion" align="center">

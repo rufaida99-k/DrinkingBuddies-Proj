@@ -21,7 +21,13 @@
   width: 100vw;
   padding-bottom: 60vh;
 }
+.blurbText{
+  padding-left:4%;
+  padding-right:4%;
+  padding-bottom: 2%;
+ font-size: 23px;
   
+}
 .blurQuiz {
     align-items: center;
     justify-content: center;
@@ -33,7 +39,8 @@
     border: 1px solid rgba(255, 255, 255, 0.125);
     width: 80%;
     min-height: max-content;
-    padding-bottom: 80px;
+    padding-top: 10px;
+    padding-bottom: 50px;
 }
 .quizHeading1 {     /*Drinking Buddy Quiz*/
   
@@ -42,7 +49,8 @@
 }
 
 .quizHeading1:hover {     /*Drinking Buddy Quiz*/
-  color: #9C6683;
+  /* color: #9C6683; */
+  color:#f09d0b;
   opacity: 0.8;
   font-weight: bold;
 }
@@ -52,7 +60,8 @@
 }
 
 .questionContents {   /* Current Question Text */
-  color: #c79800;
+  /* color: #c79800; */
+  color:#f09d0b;
 }
 
 .choices {
@@ -62,7 +71,7 @@
   margin-right: 8px;
   padding-top: 4px;
   padding-bottom: 4px;
-  padding-left: 6px;
+  padding-left: 8px;
   padding-right: 6px;
   font-size: larger;
   border-radius: 10px;
@@ -71,7 +80,7 @@
 }
 
 .choices:hover {
-  background-color: #f7ca38;
+  background-color: #f09d0b;
   color: #880661;
   transition: 500ms;
 }
@@ -82,8 +91,37 @@
   transition: 500ms;
 }
 
+
+
+.buttonContainerQuiz{
+  text-align: center;
+  padding-bottom: 2%;
+
+}
+
 .quiz-Links {
-  background: rgba(255, 255, 255, 0.375);
   color: #880661;
+  text-decoration: none;
+}
+
+.lastButtons{
+ 
+  display: inline;
+  margin-right: 2%; 
+  width: 20%;
+  padding:2%;
+  background-color: #fffafa;
+  color: #bb4f25;
+  text-align: center;
+  border-style: none;
+  font-family: "Eczar-Medium";
+  border-radius: 27px; 
+
+}
+
+.lastButtons:hover{
+  background-color: #bb4f25;
+  color:  #fffafa;
+
 }
 
