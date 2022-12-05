@@ -17,8 +17,9 @@
 }
 
 .quizLoaderButton {
-    margin-top: 0;
-    margin-bottom: 0;
+    text-align: center;
+    padding-bottom: 2%;
+    
 }
 
 .quizAnim {
@@ -26,7 +27,27 @@
 }
 
 .quiz-Linked {
-    color: #880661;
-    align-items: center;
-    justify-content: center;
+  
+    text-decoration: none;
+    
+}
+
+.quizLoaderButton-Style{
+    margin: 0 auto;
+    display: block;
+    width: 130px;
+    height: 55px;
+    /* background-color: #fffafa; */
+    background-color: #feba12;
+    border-radius: 27px;
+    color: #914644;
+    text-align: center;
+    border-style: none;
+    font-family: "Eczar-Medium";
+    
+}
+
+.quizLoaderButton-Style:hover{
+    background-color: #bb4f25;
+    color:  #fffafa;
 }

@@ -6,11 +6,12 @@ const divStyle = {
   flexWrap: "wrap",
   alignItems: "center",
   justifyContent: "center",
+  
 };
 
 const pStyle = {
   textAlign: "center",
-  fontFamily: "Chalkduster",
+ 
 };
 
 export default function HomePage() {
@@ -201,7 +202,7 @@ export default function HomePage() {
         <br></br>
         <div className="HomePage">
           <div className="calculator">
-            <h2 className="center"> BAC calculator</h2>
+            <h2 className="center"> BAC Calculator</h2>
 
             <form onSubmit={calcBac}>
               <div>
@@ -255,12 +256,12 @@ export default function HomePage() {
                 />
               </div>
 
-              <div>
+              <div className = "BACbuttonContainer">
                 <button id="calculate" type="submit">
                   {" "}
                   Calculate
                 </button>
-                <p> </p>
+                {/* <p> </p> */}
                 <button onClick={() => clearForm()} id="clear">
                   {" "}
                   Clear{" "}
