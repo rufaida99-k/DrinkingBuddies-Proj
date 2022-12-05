@@ -49,6 +49,7 @@ export default function HomePage() {
 
     {
       text: "How strong do you want your drink?",
+      images: require("./quizImages/question1.png"),
       options: [
         { id: 0, text: "Strong", drinks: ["Manhattan", "Cosmopolitan"] },
         {
@@ -62,6 +63,7 @@ export default function HomePage() {
 
     {
       text: "Is This A Party Of One Or Many?",
+      images: require("./quizImages/question2.png"),
       options: [
         { id: 0, text: "It's Me, Myself & I", drinks: ["Manhattan", "Old_Fashioned"] },
         { id: 1, text: "We Are Going All Out Tonight!", drinks: ["Cosmopolitan", "Daiquiri", "Gin_And_Tonic", "Margarita"] },
@@ -70,6 +72,7 @@ export default function HomePage() {
 
     {
       text: "Do We Like Slushies?",
+      images: require("./quizImages/question3.png"),
       options: [
         { id: 0, text: "Yes, Absolutely!", drinks: ["Daiquiri", "Margarita"] },
         {
@@ -83,6 +86,7 @@ export default function HomePage() {
 
     {
       text: "How do you take your coffee?",
+      images: require("./quizImages/question4.png"),
       options: [
         {
           id: 0,
@@ -100,6 +104,7 @@ export default function HomePage() {
 
     {
       text: "Are We Fruity Or Nah?",
+      images: require("./quizImages/question5.png"),
       options: [
         {
           id: 0,
@@ -116,6 +121,7 @@ export default function HomePage() {
     },
     {
       text: "What type of garnish?",
+      images: require("./quizImages/question6.png"),
       options: [
         {
           id: 0,
@@ -128,6 +134,7 @@ export default function HomePage() {
     },
     {
       text: "Is It New York Or Nowhere?",
+      images: require("./quizImages/question7.png"),
       options: [
         {
           id: 0,
@@ -167,6 +174,9 @@ export default function HomePage() {
 
   return (
     <div className="main-Quiz">
+      <br></br>
+      <br></br>
+      <br></br>
       <br></br><h1 class="quizHeading1"> Drinking Buddy Quiz </h1><br></br>
       <div className="blurQuiz" align="center">
       
@@ -192,7 +202,8 @@ export default function HomePage() {
         <div className="quizQuestion" align="center">
           <br></br><h2 className="questionNumber" align="center"> Question {currQuestion + 1} </h2>
           <br></br><h3 className="questionContents" align="center"> {questions[currQuestion].text}</h3>
-          
+          <img src= {questions[currQuestion].images} alt="Question Associated Icon"></img><br></br>
+          <br></br>
             {questions[currQuestion].options.map((option) => {
               return (
                 <p class="choices" onClick={() => optionClick(option)} key={option.id}>

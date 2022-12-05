@@ -8,7 +8,11 @@
 }
 
 .main-Quiz {
-  background-color: #fae2f1;
+  background-image: url("./quizImages/Pink-Lemons.png"); 
+  background-color: #f4d0e7;
+  background-position: center;
+  background-repeat: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,15 +33,18 @@
     border: 1px solid rgba(255, 255, 255, 0.125);
     width: 80%;
     min-height: max-content;
+    padding-bottom: 80px;
 }
 .quizHeading1 {     /*Drinking Buddy Quiz*/
-  color: #9C6683;
+  
+  color: rgb(97, 1, 67);
   font-weight: bold;
 }
 
 .quizHeading1:hover {     /*Drinking Buddy Quiz*/
-  color: rgb(73, 7, 52);
-  opacity: 0.7;
+  color: #9C6683;
+  opacity: 0.8;
+  font-weight: bold;
 }
 
 .questionNumber {   /* Current Question */

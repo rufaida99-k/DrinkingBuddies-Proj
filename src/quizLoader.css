@@ -1,0 +1,32 @@
+@font-face {
+    font-family: "Eczar-Medium";
+    src: local("Eczar-Medium"),
+    url("./fonts/Eczar-Medium.ttf") format("truetype");
+  }
+
+.quizLoaderMain {
+    background-color: #ffe5f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Eczar-Medium";
+    width: 100vw;
+    height: 100vh;
+    padding-bottom: 100px;
+}
+
+.quizLoaderButton {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.quizAnim {
+    margin-top: 0;
+}
+
+.quiz-Linked {
+    color: #880661;
+    align-items: center;
+    justify-content: center;
+}
