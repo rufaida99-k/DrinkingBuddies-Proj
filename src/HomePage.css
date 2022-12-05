@@ -96,12 +96,38 @@
     font-family:"Eczar-Medium";
     text-align: center;
     color:  white;
-    padding-bottom: 30%;
+    padding-bottom: 5%;
    
 
 }
 
 
+.columnStyle{
+    float: left;
+    width: 33.33%;
+    padding-bottom: 20%;
+    text-align: center;
+   
+
+}
+
+.rowStyle:after{
+    content: "";
+    display: table;
+    clear: both;
+  
+  }
+
+  .img-howItWorks{
+      width: 90px;
+      height: 80px;
+
+  }
+
+.howItWorks-text{
+    padding-top: 5%;
+    font-family:"Eczar-Medium";
+}
 
 
 /* Smaller screen size */
