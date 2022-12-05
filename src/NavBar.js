@@ -3,12 +3,12 @@ import "./NavBar.css";
 import { Link } from "react-router-dom";
 
 export default function NavBar() {
-
+  const tinyLogo = require("./HomePage-Images/HIW/db-logo.png");
   return (
     <nav className="navigationHeader">
       {/* Icon is clickable and when you click it will redirect you to the homepage */}
       <Link to="/" className="appName">
-        Drinking Buddies
+        Drinking Buddies <img src={tinyLogo} alt="tiny drink logo"></img>
       </Link>
 
       {/* navigation bar header */}
@@ -17,9 +17,7 @@ export default function NavBar() {
           <li>
             <Link className = "linksStyle" to="/">Home</Link>
           </li>
-          <li>
-             <Link className = "linksStyle" to="/about"> About</Link>
-          </li>
+         
           <li>
             <Link className = "linksStyle" to="/quiz"> Quiz </Link>
           </li>
