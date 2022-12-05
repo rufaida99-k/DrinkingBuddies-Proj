@@ -2,7 +2,6 @@ import "./App.css";
 // import React, { Component } from 'react';
 import NavBar from "./NavBar.js";
 import HomePage from "./HomePage.js";
-import AboutPage from "./AboutPage.js";
 import QuizLoaderPage from "./QuizLoaderPage.js";
 import QuizPage from "./QuizPage.js";
 import CompiledPage from "./CompiledPage.js";
@@ -23,7 +22,6 @@ function App() {
           <NavBar> </NavBar>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
             <Route path="/quiz" element={<QuizLoaderPage />} />
             <Route path="/quizStart" element={<QuizPage />} />
             <Route path="/list" element={<CompiledPage />} />

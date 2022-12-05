@@ -15,13 +15,15 @@
   text-decoration: none;
   /* color: #88c1c0; */
   color: #bb4f25;
-  font-size: 1.3rem;
+  font-size: 2rem;
   margin-left: 0.2rem;
   font-family: "Eczar-Medium";
+  padding-left: 15px;
+  padding-bottom: 0;
 }
 
 .appName:hover {
-  color:#223311;
+  color:#036127;
 }
 
 .linksStyle{
@@ -29,11 +31,13 @@
   /* color: #88c1c0; */
   color: #bb4f25;
   font-family: "Eczar-Medium";
+  padding-right: 15px;
 }
 
 .linksStyle:hover{
-  text-decoration: underline;
-  color: #223311;
+  text-decoration: none;
+  color:#036127;
+  
 }
 
 /* class for the overall navgiation section*/

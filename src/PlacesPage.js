@@ -137,7 +137,7 @@ function App() {
             Search
           </Button>
 
-          {places != "" && (
+          {places !== "" && (
             <div style={divStyle}>
               <br />
               <h1 style={h1Style}> Places Near You </h1>
