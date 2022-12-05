@@ -1,103 +1,193 @@
 // import React, { Component } from 'react';
 import Faq from "react-faq-component";
 import { GeneralData, DrinkData, HealthData } from "./FAQData.js";
+import { useState } from "react";
+import "./FAQ.css";
 
-const SINGLE_PAGE = "calc(100vh - 3.25rem)";
+const faqSign = require("./faq-Images/faq.png");
+const cocktailSign = require("./faq-Images/cocktail.png");
+const questionSign = require("./faq-Images/help.png");
+const healthSign = require("./faq-Images/health.png");
 
 const divStyle = {
-  margin: "40px",
-  height: "70vh",
-  border: "15px solid #fda0d8",
-  backgroundColor: "pink",
+  height: "40vh",
+  border: "3px solid rgb(150 123 171)",
+  borderRadius: "10px",
   display: "flex",
-  flexWrap: "wrap",
   alignItems: "center",
+  flexDirection: "column",
   justifyContent: "center",
 };
+
+const buttonStyle = {
+  display: "flex",
+  alignItems: "center",
+  flexDirection: "row",
+  justifyContent: "center",
+  width: "80vw",
+};
+
 const pStyle = {
-  fontSize: "80px",
+  fontSize: "50px",
   textAlign: "center",
   fontFamily: "Chalkduster",
 };
 
+const imgStyle = {
+  height: "20vh",
+};
+
+const iconStyle = {
+  height: "30px",
+  marginLeft: "10px",
+};
+
 const wrapperStyle = {
-  padding: "40px",
-  boxSizing: "border-box",
-  height: SINGLE_PAGE,
-  maxHeight: SINGLE_PAGE,
-  backgroundColor: "#ffe5f4",
+  padding: "30px",
 };
 
 const styles = {
-  bgColor: "pink",
+  bgColor: "#e3d7ff",
+  border: "3px solid #fda0d8",
   titleTextColor: "black",
-  rowTitleColor: "black",
-  rowContentColor: "grey",
+  rowTitleColor: "e3d7ff",
+  rowContentColor: "e3d7ff",
   rowContentPaddingRight: "50px",
   titleContentPaddingRight: "50px",
+  padding: "50px",
 };
 
 const config = {
   animate: true,
 };
 
-const faqContainer = {
-  border: "5px solid black",
-  margin: "10px",
-  padding: "10px",
+const pageStyle = {
   backgroundColor: "#ffe5f4",
 };
 
-const HomePage = () => (
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      backgroundColor: "#ffe5f4",
-    }}
-  >
-    <div style={wrapperStyle}>
-      <div style={divStyle}>
-        <p style={pStyle}> Frequently Asked Questions!</p>
-        <hr />
+const faqContainer = {
+  border: "3px solid rgb(150 123 171)",
+  borderRadius: "10px",
+  padding: "15px",
+  fontSize: "30px",
+  backgroundColor: "#ffe5f4",
+  display: "flex",
+  alignItems: "center",
+  flexDirection: "column",
+  color: "rgb(150 123 171)",
+};
+
+const titleContainer = {
+  display: "flex",
+  alignItems: "flexStart",
+};
+
+const faqStyle = {
+  padding: "15px",
+  backgroundColor: "#e3d7ff",
+  border: "2px solid rgb(150 123 171)",
+  borderRadius: "10px",
+};
+
+function HomePage() {
+  const [section, setSection] = useState([true, true, true]);
+  const [lastEvent, setEvent] = useState({});
+
+  function showSection(e, section) {
+    if (section === "all") {
+      setSection([true, true, true]);
+    } else if (section == "general") {
+      setSection([true, false, false]);
+    } else if (section == "health") {
+      setSection([false, true, false]);
+    } else if (section == "cocktail") {
+      setSection([false, false, true]);
+    }
+    if (lastEvent.target != undefined) {
+      lastEvent.target.className = "faq-buttonStyle";
+    }
+    setEvent(e);
+    e.target.className = "faq-buttonStyle-selected";
+  }
+  return (
+    <div style={pageStyle}>
+      <div style={wrapperStyle}>
+        <div style={divStyle}>
+          <img style={imgStyle} src={faqSign} />
+          <hr />
+          <div style={buttonStyle}>
+            <button
+              className="faq-buttonStyle"
+              style={{ borderRadius: "20px" }}
+              onClick={(e) => showSection(e, "all")}
+            >
+              All Questions
+            </button>
+            <button
+              className="faq-buttonStyle"
+              style={{ borderRadius: "20px" }}
+              onClick={(e) => showSection(e, "general")}
+            >
+              General Questions
+            </button>
+            <button
+              className="faq-buttonStyle"
+              style={{ borderRadius: "20px" }}
+              onClick={(e) => showSection(e, "health")}
+            >
+              Health Questions
+            </button>
+            <button
+              className="faq-buttonStyle"
+              style={{ borderRadius: "20px" }}
+              onClick={(e) => showSection(e, "cocktail")}
+            >
+              Cocktail Questions
+            </button>
+          </div>
+        </div>
       </div>
+      {section[0] && (
+        <div style={wrapperStyle}>
+          <div style={faqContainer}>
+            <div style={titleContainer}>
+              General Questions
+              <img src={questionSign} style={iconStyle} />
+            </div>
+            <div style={faqStyle}>
+              <Faq data={GeneralData} styles={styles} config={config} />
+            </div>
+          </div>
+        </div>
+      )}
+      {section[1] && (
+        <div style={wrapperStyle}>
+          <div style={faqContainer}>
+            <div style={titleContainer}>
+              Health Questions
+              <img src={healthSign} style={iconStyle} />
+            </div>
+            <div style={faqStyle}>
+              <Faq data={HealthData} styles={styles} config={config} />
+            </div>
+          </div>
+        </div>
+      )}
+      {section[2] && (
+        <div style={wrapperStyle}>
+          <div style={faqContainer}>
+            <div style={titleContainer}>
+              Cocktail Questions
+              <img src={cocktailSign} style={iconStyle} />
+            </div>
+            <div style={faqStyle}>
+              <Faq data={DrinkData} styles={styles} config={config} />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
-
-    <div
-      id="question"
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-between",
-        backgroundColor: "#ffe5f4",
-      }}
-    >
-      <div id="started"></div>
-
-      <br />
-      <br />
-      <br />
-      <br />
-
-      <div style={faqContainer}>
-        General Questions
-        <Faq data={GeneralData} styles={styles} config={config} />
-        <br />
-        <hr />
-        <br />
-        Health Questions
-        <Faq data={HealthData} styles={styles} config={config} />
-        <br />
-        <hr />
-        <br />
-        Cocktail Questions
-        <Faq data={DrinkData} styles={styles} config={config} />
-      </div>
-      <br />
-      <br />
-      <br />
-    </div>
-  </div>
-);
+  );
+}
 
 export default HomePage;
