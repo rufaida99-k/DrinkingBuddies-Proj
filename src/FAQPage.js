@@ -4,14 +4,17 @@ import { GeneralData, DrinkData, HealthData } from "./FAQData.js";
 import { useState } from "react";
 import "./FAQ.css";
 
-const faqSign = require("./faq-Images/faq.png");
+const faqSign = require("./faq-Images/faq5.png");
 const cocktailSign = require("./faq-Images/cocktail.png");
 const questionSign = require("./faq-Images/help.png");
 const healthSign = require("./faq-Images/health.png");
 
+// icon section
 const divStyle = {
   height: "40vh",
-  border: "3px solid rgb(150 123 171)",
+
+  // backgroundColor:"#fdcabc",
+  backgroundColor:"#ddaaa5",
   borderRadius: "10px",
   display: "flex",
   alignItems: "center",
@@ -34,7 +37,8 @@ const pStyle = {
 };
 
 const imgStyle = {
-  height: "20vh",
+  height: "30vh",
+  marginTop:"1%",
 };
 
 const iconStyle = {
@@ -43,15 +47,16 @@ const iconStyle = {
 };
 
 const wrapperStyle = {
-  padding: "30px",
+  padding: "50px",
 };
-
+// color for the faq 
 const styles = {
-  bgColor: "#e3d7ff",
+  
+  bgColor: "#f6c28b",
   border: "3px solid #fda0d8",
   titleTextColor: "black",
   rowTitleColor: "e3d7ff",
-  rowContentColor: "e3d7ff",
+  rowContentColor: "white",
   rowContentPaddingRight: "50px",
   titleContentPaddingRight: "50px",
   padding: "50px",
@@ -61,16 +66,20 @@ const config = {
   animate: true,
 };
 
+
 const pageStyle = {
-  backgroundColor: "#ffe5f4",
+  // backgroundColor: "#fdcabc",
+  backgroundColor:"#ddaaa5",
+  // backgroundColor: "#FFF49C",
+ 
+  
+
 };
 
 const faqContainer = {
-  border: "3px solid rgb(150 123 171)",
+
   borderRadius: "10px",
-  padding: "15px",
   fontSize: "30px",
-  backgroundColor: "#ffe5f4",
   display: "flex",
   alignItems: "center",
   flexDirection: "column",
@@ -80,13 +89,16 @@ const faqContainer = {
 const titleContainer = {
   display: "flex",
   alignItems: "flexStart",
+  color: "#fbfbfb",
+  fontSize:"45px",
 };
 
 const faqStyle = {
   padding: "15px",
-  backgroundColor: "#e3d7ff",
-  border: "2px solid rgb(150 123 171)",
+  backgroundColor: "#f6c28b",
+  // border: "2px solid  #9d5450",
   borderRadius: "10px",
+  color:"white",
 };
 
 function HomePage() {
