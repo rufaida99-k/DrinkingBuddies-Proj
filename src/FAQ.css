@@ -3,19 +3,24 @@
   display: block;
   width: 20%;
   padding: 2%;
-  background-color: #e3d7ff;
-  color: rgb(150, 123, 171);
+  /* background-color: #e3d7ff;  */
+  /* favorite background-color: #9d5450; */
+  background-color: #9ac1f5;
+  /* background-color: #ffffff; */
+  /* color: rgb(150, 123, 171); */
+  color: white;
   text-align: center;
   border-style: none;
   font-family: "Eczar-Medium";
-  font-size: 20px;
+  font-size: 30px;
   z-index: 1;
   align-items: center;
 }
 
 .faq-buttonStyle:hover {
-  background-color: rgb(150, 123, 171);
+  background-color: #f6c28b;
   color: #fffafa;
+  text-decoration: underline;
 }
 
 .faq-buttonStyle-selected {
@@ -23,16 +28,23 @@
   display: block;
   width: 20%;
   padding: 2%;
-  font-size: 20px;
-  background-color: rgb(150, 123, 171);
+  font-size: 30px;
+  background-color: #f6c28b;
   color: #fffafa;
   text-align: center;
   border-style: none;
   font-family: "Eczar-Medium";
   z-index: 1;
   align-items: center;
+  text-decoration: underline;
 }
 
 .faqStyle {
   margin: 50px;
 }
+
+/* .newPageStyle{
+  background-color: #FBAB7E;
+  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+
+} */
