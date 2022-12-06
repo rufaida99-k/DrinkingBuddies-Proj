@@ -47,6 +47,16 @@ export default function HomePage() {
             <br></br>
             <div className="HIW-Glass1">
               <p className="howItWorks-text"> Take the drinking quiz </p>
+              <Link className="quiz-buttonLinkStyle" to="/quiz">
+                <br></br>
+                <br></br>
+                <button
+                  className="quiz-buttonStyle2"
+                  style={{ borderRadius: "20px" }}
+                >
+                  Take Quiz
+                </button>
+              </Link>
             </div>
           </div>
           <div class="columnStyle">
@@ -54,6 +64,16 @@ export default function HomePage() {
             <br></br>
             <div className="HIW-Glass2">
               <p className="howItWorks-text"> Calculate your BAC </p>
+              <Link className="quiz-buttonLinkStyle" to="/bac">
+                <br></br>
+                <br></br>
+                <button
+                  className="quiz-buttonStyle2"
+                  style={{ borderRadius: "20px" }}
+                >
+                  Calculate BAC
+                </button>
+              </Link>
             </div>
           </div>
           <div class="columnStyle">
@@ -61,6 +81,16 @@ export default function HomePage() {
             <br></br>
             <div className="HIW-Glass3">
               <p className="howItWorks-text"> Have Questions? Visit FAQ </p>
+              <Link className="quiz-buttonLinkStyle" to="/faq">
+                <br></br>
+                <br></br>
+                <button
+                  className="quiz-buttonStyle2"
+                  style={{ borderRadius: "20px" }}
+                >
+                  Read FAQ
+                </button>
+              </Link>
             </div>
           </div>
         </div>
