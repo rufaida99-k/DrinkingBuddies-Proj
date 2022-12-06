@@ -80,7 +80,7 @@ function App() {
         <h2>{props["place"].name}</h2>
         <p> Address: {props["place"].address} </p>
         <p> Rating: {props["place"].rating}</p>
-        <img style={imgStyle} alt="Icon" src={props["place"].icon} />
+        <img style={imgStyle} alt="Icon" src={"https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png"} />
 
         <br />
       </div>
@@ -91,11 +91,12 @@ function App() {
     e.preventDefault();
     try {
       let res = await axios.get(
-        `https://maps.googleapis.com/maps/api/place/textsearch/json?query=bars%20in%20${zipcode.trim()}&key=AIzaSyDJyQraEDSqatjKqzQlMApq0DbcR73D6WA`,
+        `https://drinkingbuddies-back-end.herokuapp.com/getLocalBars/${zipcode.trim()}`,
         {
           method: "GET",
         }
       );
+      console.log(res)
       let result = await res.data;
       let results = result["results"].splice(0, 5);
       let placesArray = [];
@@ -104,9 +105,8 @@ function App() {
           console.log(results[i]);
           placesArray.push({
             name: results[i]["name"],
-            address: results[i]["formatted_address"],
+            address: results[i]["address"],
             rating: results[i]["rating"],
-            icon: results[i]["icon"],
           });
         }
         setPlaces(placesArray);
@@ -133,9 +133,11 @@ function App() {
             onChange={(e) => setZipcode(e.target.value)}
           />
           <hr />
+          <div class="vertical-center">
           <Button variant="contained" size="lg" type="submit">
             Search
           </Button>
+          </div>
 
           {places.length > 1 && (
             <div style={divStyle}>
