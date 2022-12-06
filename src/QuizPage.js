@@ -212,7 +212,7 @@ export default function HomePage() {
             <hr />
             <div className="buttonContainerQuiz">
               <Link className="quiz-Links" to="/list">
-                <button className="lastButtons">Take Quiz</button>
+                <button className="lastButtons">Learn More</button>
               </Link>
 
               <Link className="quiz-Links" to="/quiz">
