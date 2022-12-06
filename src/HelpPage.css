@@ -1,65 +1,68 @@
-:root {
-    --primary: #E3D7FF;
-    --secondary: #731963;
-    --dark:#4F0147;
-    --light: #C9EDDC;
-    --batman: rgb(207, 187, 214);
-     
-  }
-  *{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-
-}       
-
-.HomePage{
-    display: flex;
-    min-height: 40vh;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    
-}
-.helpButton{
-    display: block;
-
+.HelpPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: "#689fff";
 }
 
-.answer{
-    font-weight: lighter;
-
-}
-.link{
-    display: block;
-    padding: 10px;
-
-}
-.buttonStyle{
-    padding: 10px;
-    height: 80px;
-    width: 300px;
-    border-radius: 0%;
-    background-color: white ;
-    border-color: white;
-
+.helpButton {
+  display: block;
 }
 
-
-.newList{
-    text-align: center;
-    display: inline-block;
-    list-style: square;
-    
-
-
-    
+.answer {
+  font-weight: lighter;
+  font-family: "Eczar-Medium";
+  font-size: 30px;
 }
-.newBullet{
-   width: 800px;
-   text-align: left;
-   background-color: white;
-   margin: 30px;
-   
 
+.link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.newList {
+  text-align: center;
+  font-size: 15px;
+  font-family: "Eczar-Medium";
+  font-weight: lighter;
+}
+.newBullet {
+  text-align: left;
+  margin: 5px;
+}
+
+.cards {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 32px 32px 0 rgba(31, 38, 135, 0.67);
+  backdrop-filter: blur(15.5px);
+  -webkit-backdrop-filter: blur(15.5px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.helpButtonStyle {
+  padding: 2%;
+  width: 300px;
+  background-color: #8db0ef;
+  text-align: center;
+  border-style: none;
+  font-size: 20px;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.helpButtonStyle:hover {
+  background-color: #b2d7f8;
+  color: white;
 }
