@@ -94,6 +94,28 @@
     color:  #fffafa;
 
 }
+
+.quiz-buttonStyle2{
+    margin: 0 auto;
+    display: block;
+    width: 40%;
+    padding:2%;
+    background-color: #fffafa;
+    color: #bb4f25;
+    text-align: center;
+    border-style: none;
+    font-family: "Eczar-Medium";
+    z-index: 1; 
+    align-items: center;
+
+ 
+}
+
+.quiz-buttonStyle2:hover{
+    background-color: #bb4f25;
+    color:  #fffafa;
+
+}
 .howItWorks{
     padding-top: 4%;
     background-color: #ffae55;
@@ -141,12 +163,12 @@
     -webkit-backdrop-filter: blur( 15.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
-    padding-bottom: 250px;
+    padding-bottom: 100px;
 }
 
 .HIW-Glass2 {
@@ -156,12 +178,12 @@
     -webkit-backdrop-filter: blur( 15.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
-    padding-bottom: 250px;
+    padding-bottom: 100px;
 }
 
 .HIW-Glass3 {
@@ -171,13 +193,14 @@
     -webkit-backdrop-filter: blur( 15.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
     align-items: center;
     justify-content: center;
-    margin-top: 15px;
-    padding-bottom: 250px;
+    margin-top: 16px;
+    padding-bottom: 100px;
 }
+
 
 /* Smaller screen size */
 @media screen and (max-width: 600px) {
