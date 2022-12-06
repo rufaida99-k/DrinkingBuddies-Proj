@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/DrinkingBuddies-Proj/static/css/main.6794c8a6.css",
-    "main.js": "/DrinkingBuddies-Proj/static/js/main.af0928e8.js",
+    "main.css": "/DrinkingBuddies-Proj/static/css/main.a5e26733.css",
+    "main.js": "/DrinkingBuddies-Proj/static/js/main.574721b5.js",
     "static/js/787.f5547d80.chunk.js": "/DrinkingBuddies-Proj/static/js/787.f5547d80.chunk.js",
     "static/media/womenDrinking.gif": "/DrinkingBuddies-Proj/static/media/womenDrinking.1d40687ff99f180f76d0.gif",
     "static/media/Pink-Lemons.png": "/DrinkingBuddies-Proj/static/media/Pink-Lemons.9db43bf476c2354b9624.png",
@@ -17,18 +17,22 @@
     "static/media/sloppyDrunk.jpg": "/DrinkingBuddies-Proj/static/media/sloppyDrunk.0e8a58e802005c066bcc.jpg",
     "static/media/toasting.jpg": "/DrinkingBuddies-Proj/static/media/toasting.552b443c624148e60c61.jpg",
     "static/media/yellowLogo.png": "/DrinkingBuddies-Proj/static/media/yellowLogo.17829f2eb6513103b5ec.png",
+    "static/media/woman.png": "/DrinkingBuddies-Proj/static/media/woman.4e1e2345ad96270356e3.png",
+    "static/media/car.png": "/DrinkingBuddies-Proj/static/media/car.0f8572c661d05f031d91.png",
     "static/media/help.png": "/DrinkingBuddies-Proj/static/media/help.97a9e814d509e1aa0ca3.png",
+    "static/media/faq5.png": "/DrinkingBuddies-Proj/static/media/faq5.61353f178fef6e186d81.png",
     "static/media/stage5.jpg": "/DrinkingBuddies-Proj/static/media/stage5.b93a6835eb21eeaca8db.jpg",
+    "static/media/phone.png": "/DrinkingBuddies-Proj/static/media/phone.097ef67f1a9a19cbff3b.png",
+    "static/media/siren.png": "/DrinkingBuddies-Proj/static/media/siren.f7ad0269c14de475766b.png",
     "static/media/cocktail.png": "/DrinkingBuddies-Proj/static/media/cocktail.4c823e8dbb9af673d075.png",
-    "static/media/calculator.png": "/DrinkingBuddies-Proj/static/media/calculator.be865890176ce2c1e15d.png",
     "static/media/question7.png": "/DrinkingBuddies-Proj/static/media/question7.3b720db3b420a88f41ef.png",
     "index.html": "/DrinkingBuddies-Proj/index.html",
-    "main.6794c8a6.css.map": "/DrinkingBuddies-Proj/static/css/main.6794c8a6.css.map",
-    "main.af0928e8.js.map": "/DrinkingBuddies-Proj/static/js/main.af0928e8.js.map",
+    "main.a5e26733.css.map": "/DrinkingBuddies-Proj/static/css/main.a5e26733.css.map",
+    "main.574721b5.js.map": "/DrinkingBuddies-Proj/static/js/main.574721b5.js.map",
     "787.f5547d80.chunk.js.map": "/DrinkingBuddies-Proj/static/js/787.f5547d80.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6794c8a6.css",
-    "static/js/main.af0928e8.js"
+    "static/css/main.a5e26733.css",
+    "static/js/main.574721b5.js"
   ]
 }
