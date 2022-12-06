@@ -20,12 +20,12 @@ const GeneralData = {
     {
       title: "Is alcohol a drug?",
       content:
-        "yes, alchol is a drug. In fact, it is one of the most commonly used drug.",
+        "Yes, alcohol is a drug. In fact, it is one of the most commonly used drugs.",
     },
     {
       title: "How can I know if I may have a drinking problem?",
       content:
-        "According to Mount Sinai, you may have a drinking problem if you are unable to stop drinking, spend a lot of time drinking, you experience symptoms of withdrawl when you stop drinking, and you can only think about the urge to drink. These are only a few symptoms to figure out if you have a drinking problem, but if you want to learn more information click here.",
+        `According to Mount Sinai, you may have a drinking problem if you are unable to stop drinking, spend a lot of time drinking, you experience symptoms of withdrawl when you stop drinking, and you can only think about the urge to drink. There are many other symptoms of having a drinking problem. To learn more, please click <a href="https://www.mountsinai.org/health-library/report/alcohol-use-disorders">here</a>.`,
     },
     {
       title: "What is binge drinking?",
@@ -46,7 +46,7 @@ const HealthData = {
     {
       title: "How long does it take for alcohol to be metabolized in the body?",
       content:
-        "It takes more than one hour to metabolize one serving of alcohol.",
+        "On average, it takes about one hour for one standard drink of alcohol to be metabolized by the body. This is dependent on many factors.",
     },
     {
       title: "How long will it take to feel the effects of alcohol?",
@@ -56,7 +56,7 @@ const HealthData = {
     {
       title: "How can alcohol make me feel?",
       content:
-        "Even though alcohol may make you feel good, it is still a depressant. It will dehydrate you. So make sure you stay hydrated!",
+        "Even though alcohol may make you feel good, it is still a depressant, which dehydrates you. It is important to make sure you stay hydrated!",
     },
     {
       title: "What are quick ways for me to get sober while drinking?",
@@ -70,7 +70,7 @@ const HealthData = {
     {
       title: "How do I know if I have alcohol poisoning?",
       content:
-        "According to the National Institute on Alcohol Abuse and Alcoholism, the symptoms of alcohol overdose include mental confusion, difficulty remaining conscious, vomiting, seizure, trouble breathing, slow heart rate, clammy skin, dulled responses such as no gag reflex (which prevents choking), and extremely low body temperature. Alcohol overdose can lead to permanent brain damage or death.",
+        "According to the National Institute on Alcohol Abuse and Alcoholism, the symptoms of alcohol overdose include mental confusion, difficulty remaining conscious, vomiting, seizure, trouble breathing, slow heart rate, clammy skin, dulled responses such as no gag reflex (which prevents choking), and extremely low body temperature. Alcohol overdose can lead to permanent brain damage or death. If you believe you or someone you are with may have alcohol poisoning, please call 911. ",
     },
   ],
 };
@@ -92,7 +92,7 @@ const DrinkData = {
     {
       title: "What’s in simple syrup?",
       content:
-        "Simple syrup is used to sweeten drinks, and it is easily customizable with other flavors.",
+        "Simple syrup is equal parts granulated sugar and water. It is used to sweeten drinks, and it is easily customizable with other flavors.",
     },
     {
       title: "What’s a “chaser” or “back?",
