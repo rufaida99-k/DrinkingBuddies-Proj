@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DrinkingBuddies-Proj/static/css/main.4f16917b.css",
-    "main.js": "/DrinkingBuddies-Proj/static/js/main.7cb5be56.js",
+    "main.js": "/DrinkingBuddies-Proj/static/js/main.c90fdb4a.js",
     "static/js/787.f5547d80.chunk.js": "/DrinkingBuddies-Proj/static/js/787.f5547d80.chunk.js",
     "static/media/womenDrinking.gif": "/DrinkingBuddies-Proj/static/media/womenDrinking.1d40687ff99f180f76d0.gif",
     "static/media/Pink-Lemons.png": "/DrinkingBuddies-Proj/static/media/Pink-Lemons.9db43bf476c2354b9624.png",
@@ -28,11 +28,11 @@
     "static/media/question7.png": "/DrinkingBuddies-Proj/static/media/question7.3b720db3b420a88f41ef.png",
     "index.html": "/DrinkingBuddies-Proj/index.html",
     "main.4f16917b.css.map": "/DrinkingBuddies-Proj/static/css/main.4f16917b.css.map",
-    "main.7cb5be56.js.map": "/DrinkingBuddies-Proj/static/js/main.7cb5be56.js.map",
+    "main.c90fdb4a.js.map": "/DrinkingBuddies-Proj/static/js/main.c90fdb4a.js.map",
     "787.f5547d80.chunk.js.map": "/DrinkingBuddies-Proj/static/js/787.f5547d80.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4f16917b.css",
-    "static/js/main.7cb5be56.js"
+    "static/js/main.c90fdb4a.js"
   ]
 }
