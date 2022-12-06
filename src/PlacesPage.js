@@ -80,7 +80,7 @@ function App() {
         <h2>{props["place"].name}</h2>
         <p> Address: {props["place"].address} </p>
         <p> Rating: {props["place"].rating}</p>
-        <img style={imgStyle} alt="Icon" src={props["place"].icon} />
+        <img style={imgStyle} alt="Icon" src={"https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png"} />
 
         <br />
       </div>
@@ -107,7 +107,6 @@ function App() {
             name: results[i]["name"],
             address: results[i]["address"],
             rating: results[i]["rating"],
-            icon: results[i]["icon"],
           });
         }
         setPlaces(placesArray);
