@@ -10,36 +10,37 @@ const divStyle = {
 };
 
 const wrapperStyle = {
-  backgroundColor: "rgb(104 159 255 / 83%)",
+  backgroundColor: "#DDAAA5",
 };
 
-const pStyle = {
-  fontSize: "80px",
-  textAlign: "center",
-};
 
 const card = {
   textAlign: "center",
-  fontFamily: "AmericanTypewriter",
-  fontSize: "30px",
-  padding: "10px",
+  fontFamily: "Eczar-Medium",
+  fontSize: "2rem",
+  paddingTop: "35px",
+  paddingBottom:"35px",
   display: "block",
   fontWeight: "bold",
-  backgroundColor: "#b2ceff",
+  backgroundColor: "#fffafa",
   width: "40vw",
   overflow: "auto",
+  marginRight:"8%",
+  //  marginBottom:"5%",
+  marginTop: "2%",
 };
 
 const rowStyle = {
   display: "flex",
-  height: "65vh",
-  width: "90vw",
+  height: "58vh",
+  width: "70vw",
+  padding:"10px",
   alignItems: "stretch",
   justifyContent: "space-evenly",
 };
 
 const imgStyle = {
-  height: "50px",
+  height: "58px",
 };
 
 const car = require("./help-Images/car.png");
@@ -51,21 +52,21 @@ export default function helpCenter() {
   return (
     <div style={wrapperStyle}>
       <br />
-      <div style={pStyle}> Hi, How Can We Help You?</div>
+      <div className= "helpPageTitle"> Hi, How Can We Help You?</div>
       <br />
       <div className="HelpPage">
         <div style={rowStyle}>
           <div style={card} className="cards">
             <img src={siren} style={imgStyle} />
             <br />
-            Is this an emergency?
+            <div className = "cardsTitle"> Is this an emergency?</div>
             <hr />
             <p className="answer"> Call 911! </p>
           </div>
           <div style={card} className="cards">
             <img src={car} style={imgStyle} />
             <br />
-            Do you need a cab service?
+            <div className = "cardsTitle"> Do you need a cab service?</div>
             <hr />
             <div className="helpButton">
               <button className="helpButtonStyle">
@@ -101,7 +102,7 @@ export default function helpCenter() {
           <div style={card} className="cards">
             <img src={phone} style={imgStyle} />
             <br />
-            Questions about alcohol abuse addiction?
+            <div className = "cardsTitle"> Questions about alcohol abuse addiction?</div>
             <hr />
             <ul className="newList">
               <li className="newBullet">
@@ -131,12 +132,12 @@ export default function helpCenter() {
           <div style={card} className="cards">
             <img src={faq} style={imgStyle} />
             <br />
-            Have any other questions about Alcohol?
+            <div className = "cardsTitle"> Have any other questions about alcohol?</div>
             <hr />
             <p className="answer">
               {" "}
               Visit our{" "}
-              <Link className="linksStyle" to="/quiz">
+              <Link className="linkTextStyle" to="/faq">
                 {" "}
                 FAQ Page{" "}
               </Link>
