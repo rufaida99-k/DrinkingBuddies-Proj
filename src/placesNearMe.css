@@ -1,0 +1,48 @@
+
+@font-face {
+  font-family: "Eczar-Medium";
+  src: local("Eczar-Medium"),
+  url("./fonts/Eczar-Medium.ttf") format("truetype");
+}
+
+.placesNearMeStyle {
+    background-color: #ffb92c;
+    width: 100vw;
+    padding-bottom: 500px;
+    
+}
+
+.Places-Near-Me-Heading-Title, .PNM-Zipcode-H4 {
+  font-family: "Eczar-Medium";
+}
+
+
+.PNM-Div {
+  background: rgba( 255, 255, 255, 0.4 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+    
+  }
+  
+
+.button-style-NPM{
+  background-color: red;
+}
+
+.NPM-ZipCode-Button-Style {
+  background-color: #66222e;
+  color: white;
+  border-radius: 25px;
+  width: 100px;
+  height: 45px;
+  font-size: 1.2rem;
+  border-color: #66222e;
+}
+
+.NPM-ZipCode-Button-Style:hover{
+  background-color: black;
+  
+}
