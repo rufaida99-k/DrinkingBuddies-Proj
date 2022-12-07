@@ -1,10 +1,4 @@
-:root {
-  --primary: #e3d7ff;
-  --secondary: #731963;
-  --dark: #4f0147;
-  --light: #c9eddc;
-  --batman: rgb(207, 187, 214);
-}
+
 
 * {
   box-sizing: border-box;
@@ -18,13 +12,26 @@
   src: local("Eczar-Medium"), url("./fonts/Eczar-Medium.ttf") format("truetype");
 }
 
-.HomePage {
+.BAC-title{
+  text-align: center;
+  font-family: "Eczar-Medium";
+  font-size: 5rem;
+  /* margin: 24px 0; */
+  padding-bottom: 5%;
+  color: #fffafa;
+  /* color: #f09d0b; */
+  font-weight: bold;
+
+}
+
+
+.BAC-mainPage {
   display: flex;
   min-height: 90vh;
   justify-content: center;
   align-items: center;
-  padding: 5px;
-  background-color: #ffe6f6;
+  padding: 5%;
+  background-color: #DDAAA5;
 }
 
 .calculator {
@@ -32,8 +39,9 @@
   max-width: 500px;
   box-shadow: 0px 2px 64px rgba(0, 0, 0, 0.2);
   border-radius: 16px;
-  padding: 1.5rem;
+  padding: 2.5rem;
   overflow: hidden;
+  background-color: #fffafa;
 }
 
 input {
@@ -42,13 +50,17 @@ input {
   padding: 8px 4px;
   margin: 8px 0;
   border-radius: 8px;
-  color: var(--dark);
   font-weight: bold;
   align-content: center;
   text-align: center;
+
+  
 }
+
+
 .BACbuttonContainer {
-  padding-top: 6%;
+  padding-left: 6%;
+  padding-top: 5%;
 }
 
 #calculate {
@@ -56,22 +68,42 @@ input {
   border: none;
   outline: none;
   font-size: 16px;
-  /* padding: 16px; */
-
   width: 10rem;
   height: 3rem;
   cursor: pointer;
   transition: 0.4s;
   background-color: rgba(199, 233, 253, 255);
-  background-color: #f6db93;
+  background-color: #f09d0b;
   border-radius: 27px;
-  color: #9f5854;
+  color:  #fffafa;
   margin: 10px;
+  display: inline-block;
+ 
 }
+
+
+#retry {
+  appearance: none;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 10rem;
+  height: 3rem;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: rgba(199, 233, 253, 255);
+  background-color: #f09d0b;
+  border-radius: 27px;
+  color:  #fffafa;
+  margin: 10px;
+  text-align: center;
+ 
+}
+
 
 #calculate:hover {
   opacity: 0.9;
-  background-color: rgba(199, 233, 253, 255);
+  background-color:  #66222e;
   color: white;
 }
 
@@ -81,20 +113,19 @@ input {
   outline: none;
   border-radius: 27px;
   font-size: 16px;
-
-  /* padding: 16px; */
   width: 10rem;
   height: 3rem;
   cursor: pointer;
   transition: 0.4s;
-  background-color: #f6db93;
-  color: #9f5854;
+  background-color: #f09d0b;
+ 
+  color:  #fffafa;
   margin: 10px;
 }
 
 #clear:hover {
   opacity: 0.9;
-  background-color: rgba(199, 233, 253, 255);
+  background-color:  #66222e;
   color: white;
 }
 
@@ -111,4 +142,17 @@ p {
 }
 .BAC-img img {
   height: 225px;
+}
+
+.bac-labelStyle{
+  color: #66222e;
+  font-family: "Eczar-Medium";
+  font-weight: lighter;
+  font-size: 1.3rem;
+ 
+}
+
+.bac-sectionInput{
+padding-bottom: 3%;
+
 }
