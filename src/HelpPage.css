@@ -1,9 +1,30 @@
+
+@font-face {
+  font-family: "Eczar-Medium";
+  src: local("Eczar-Medium"),
+  url("./fonts/Eczar-Medium.ttf") format("truetype");
+}
+
+
+
+
+
 .HelpPage {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: "#689fff";
+  background-color: #DDAAA5;
+}
+
+.helpPageTitle{
+  margin-top: 4%;
+  margin-bottom: 2%;
+  font-size: 4rem;
+  text-align: center;
+  color:#fffafa;
+  font-weight: bold;
+
 }
 
 .helpButton {
@@ -14,13 +35,22 @@
   font-weight: lighter;
   font-family: "Eczar-Medium";
   font-size: 30px;
+  
 }
 
 .link {
   display: block;
   padding: 10px;
   text-decoration: none;
-  color: black;
+  color: white;
+}
+
+.linkTextStyle{
+  color:#f09d0b;
+  text-decoration: none;
+}
+.linkTextStyle:hover{
+  color:#bb4f25; 
 }
 
 .link:hover {
@@ -32,11 +62,15 @@
 
 .newList {
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   font-family: "Eczar-Medium";
   font-weight: lighter;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 2%;
 }
 .newBullet {
+  padding-bottom: 4%;
   text-align: left;
   margin: 5px;
 }
@@ -47,22 +81,28 @@
   backdrop-filter: blur(15.5px);
   -webkit-backdrop-filter: blur(15.5px);
   border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255,3 255, 0.18);
+}
+
+.cardsTitle{
+  padding-top: 2%;
+  color: #bb4f25; 
+
 }
 
 .helpButtonStyle {
   padding: 2%;
-  width: 300px;
-  background-color: #8db0ef;
+  width: 200px;
+  background-color: #f09d0b;
   text-align: center;
   border-style: none;
   font-size: 20px;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 28px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .helpButtonStyle:hover {
-  background-color: #b2d7f8;
+  background-color: #bb4f25; 
   color: white;
 }
