@@ -14,7 +14,7 @@
 .appName {
   text-decoration: none;
   /* color: #88c1c0; */
-  color: #bb4f25;
+  color: #66222e;
   font-size: 2rem;
   margin-left: 0.2rem;
   font-family: "Eczar-Medium";
@@ -23,20 +23,19 @@
 }
 
 .appName:hover {
-  color:#036127;
+  color: #DDAAA5;
 }
 
 .linksStyle{
   text-decoration: none;
-  /* color: #88c1c0; */
-  color: #bb4f25;
+  color: #66222e;
   font-family: "Eczar-Medium";
   padding-right: 15px;
 }
 
 .linksStyle:hover{
   text-decoration: none;
-  color:#036127;
+  color: #DDAAA5;
   
 }
 

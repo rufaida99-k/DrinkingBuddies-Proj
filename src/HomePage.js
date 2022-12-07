@@ -7,9 +7,9 @@ export default function HomePage() {
   // let icon1 = require("./HomePage-Images/cocktail.png");
   // let icon2 = require("./HomePage-Images/calculator.png");
   // let icon3 = require("./HomePage-Images/help.png");
-  const quizGuide = require("./HomePage-Images/HIW/quiz.png");
-  const bacGuide = require("./HomePage-Images/HIW/calculator.png");
-  const faqGuide = require("./HomePage-Images/HIW/faq.png");
+  const quizGuide = require("./HomePage-Images/HIW/cocktailbw.png");
+  const bacGuide = require("./HomePage-Images/HIW/calculatorbw.png");
+  const faqGuide = require("./HomePage-Images/HIW/faqbw.png");
 
   return (
     <>
@@ -37,7 +37,7 @@ export default function HomePage() {
           </Link>
         </div>
       </div>
-
+      <hr className = "lineStyle"></hr>
       <div className="howItWorks">
         <h2 className="howItWorks-title">How It Works</h2>
 
