@@ -1,18 +1,6 @@
 import React, { useState } from "react";
 import "./bacPage.css";
 
-const divStyle = {
-  display: "flex",
-  flexWrap: "wrap",
-  alignItems: "center",
-  justifyContent: "center",
-  
-};
-
-const pStyle = {
-  textAlign: "center",
- 
-};
 
 export default function HomePage() {
   const [sex, setSex] = useState("");
@@ -24,11 +12,12 @@ export default function HomePage() {
   const [shot, setShot] = useState(0);
   const [hours, setHours] = useState(0);
 
+
   let clearedBefore = 0;
 
   /* insert the calculate bac function here */
 
-  let calcBac = (event) => {
+  const calcBac = (event) => {
     // in case there is no information in the form, it will not submit
     event.preventDefault();
 
@@ -76,6 +65,8 @@ export default function HomePage() {
         console.log("result is not a number: " + result);
       }
       setBAC(result.toFixed(2));
+
+      console.log(BAC);
 
       // logic for BAC message
       if (result === 0.0) {
@@ -196,89 +187,108 @@ export default function HomePage() {
     imgSrc = require("./BAC-Images/comaWithDeath.jpg");
   }
 
+
+
   return (
-    <div style={divStyle}>
-      <p style={pStyle}>
-        <br></br>
-        <div className="HomePage">
-          <div className="calculator">
-            <h2 className="center"> BAC Calculator</h2>
 
-            <form onSubmit={calcBac}>
-              <div>
-                <label> Sex (F/M)</label>
-                <input
-                  value={sex}
-                  onChange={(event) => setSex(event.target.value)}
-                />
+        <div className="BAC-mainPage">
+
+
+          <div> 
+
+            {/* title of the page  */}
+            <h1 className = "BAC-title"> BAC Calculator </h1> 
+
+           {/* entire calculator section  */}
+          
+            <div className="calculator">
+
+
+                <form onSubmit={calcBac}>
+                  <div className = "bac-sectionInput">
+                    <label className = "bac-labelStyle"> Sex (F/M)</label>
+                    <input
+                      value={sex}
+                      onChange={(event) => setSex(event.target.value)}
+                    />
+                  </div>
+
+                  <div className = "bac-sectionInput">
+                    <label className = "bac-labelStyle"> Weight (lbs)</label>
+                    <input
+                      value={weight}
+                      onChange={(event) => setWeight(event.target.value)}
+                    />
+                  </div>
+
+                  <div className = "bac-sectionInput">
+                    <label className = "bac-labelStyle"> Beer</label>
+                    <input
+                      value={beer}
+                      onChange={(event) => setBeer(event.target.value)}
+                    />
+                  </div>
+
+                  <div className = "bac-sectionInput">
+                    <label className = "bac-labelStyle"> Wine</label>
+                    <input
+                      value={wine}
+                      onChange={(event) => setWine(event.target.value)}
+                    />
+                  </div>
+
+                  <div className = "bac-sectionInput">
+                    <label className = "bac-labelStyle"> Shot</label>
+                    <input
+                      value={shot}
+                      onChange={(event) => setShot(event.target.value)}
+                    />
+                  </div>
+
+                  <div className = "bac-sectionInput">
+                    <label className = "bac-labelStyle">
+                      {" "}
+                      How many hours have passed since your first drink?{" "}
+                    </label>
+                    <input
+                      value={hours}
+                      onChange={(event) => setHours(event.target.value)}
+                    />
+                  </div>
+
+                  <div className = "BACbuttonContainer">
+                    <button id="calculate" type="submit">
+                      {" "}
+                      Calculate
+                    </button>
+                    {/* <p> </p> */}
+                    <button onClick={() => clearForm()} id="clear">
+                      {" "}
+                      Clear{" "}
+                    </button>
+                  </div>
+                </form>
+
+              <div className="center">
+                <h4> Your BAC is: {BAC} %</h4>
+                <p> {message} </p>
               </div>
 
-              <div>
-                <label> Weight (lbs)</label>
-                <input
-                  value={weight}
-                  onChange={(event) => setWeight(event.target.value)}
-                />
+              <div className="BAC-img">
+                <img src={imgSrc} alt=""></img>
               </div>
 
-              <div>
-                <label> Beer</label>
-                <input
-                  value={beer}
-                  onChange={(event) => setBeer(event.target.value)}
-                />
-              </div>
+          </div> 
 
-              <div>
-                <label> Wine</label>
-                <input
-                  value={wine}
-                  onChange={(event) => setWine(event.target.value)}
-                />
-              </div>
 
-              <div>
-                <label> Shot</label>
-                <input
-                  value={shot}
-                  onChange={(event) => setShot(event.target.value)}
-                />
-              </div>
 
-              <div>
-                <label>
-                  {" "}
-                  How many hours have passed since your first drink?{" "}
-                </label>
-                <input
-                  value={hours}
-                  onChange={(event) => setHours(event.target.value)}
-                />
-              </div>
+             
 
-              <div className = "BACbuttonContainer">
-                <button id="calculate" type="submit">
-                  {" "}
-                  Calculate
-                </button>
-                {/* <p> </p> */}
-                <button onClick={() => clearForm()} id="clear">
-                  {" "}
-                  Clear{" "}
-                </button>
-              </div>
-            </form>
+            
 
-            <div className="center">
-              <h4> Your BAC is: {BAC} %</h4>
-              <p> {message} </p>
-            </div>
-            <div className="BAC-img">
-              <img src={imgSrc} alt=""></img>
-            </div>
           </div>
+
         </div>
-      </p>
-    </div>
+      
   );
 }
