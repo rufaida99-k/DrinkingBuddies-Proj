@@ -1,25 +1,117 @@
 
+@font-face {
+    font-family: "Eczar-Medium";
+    src: local("Eczar-Medium"), url("./fonts/Eczar-Medium.ttf") format("truetype");
+  }
+
+/* need to change the id name here  */
 #buttonStyle {
-    font-family: "Chalkduster";
-    font-size: 15px;
-    background-color: #240046;
-    border-color: #240046;;
+    font-family: "Eczar-Medium";
+    font-size: 40px;
+    /* background-color: #66222e ; */
+    color:#66222e;
+    font-weight:bold;
+    background-color: #fffafa ;
+    border:none;
+
+    border-radius: 18px;
     margin-top: 170px;
+    
+
 }
 
-#buttonStyle:hover {
-    background-color: #5a189a;
-    border-color: #5a189a;
-    opacity: 1.1;
-}
+ #buttonStyle:hover {
+    background-color: #fffafa;
+    color: #f09d0b;
+    border:none;
+    opacity: 0.8;
+} 
 
 #buttonStyle:active {
-    background-color: #a663cc;
-    border-color: #a663cc;
-    color: black;
-    opacity: 0.9;
+    background-color: #fffafa ;
+    color: #66222e;
+    border:none;
 }
 
 .buttonStyle.rec-dot {
     background-color: red;
+}
+
+.browsePageStyle{
+    background-color: #DDAAA5  ;
+
+}
+/* Compiled list page styling */
+.browseRowStyle{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:4%;
+    
+}
+
+/* container containg the majority of the carousel container*/
+.browseDivStyle{
+    margin: 1.9%;
+    width: 70vh;
+    height: 65vh;
+    border-radius: 20px;
+    border-color: #66222e ;
+    font-family: Garamond;
+    font-size: 20px;
+    background-color: #fffafa; 
+}
+
+.browse-H1Style{
+    font-weight: bolder;
+    color: #66222e ;
+    text-align: center;
+    font-size: 3.1rem;
+    padding-bottom: 2%;
+
+}
+
+.browse-ImgStyle{
+    width: 50%;
+    height: 50%;
+    padding-top: 2%;
+}
+
+/* container containing the pictures, title, ingredients */
+.browse-pStyle{
+  margin: 9px;
+  text-align: center;
+  background-color: #fffafa; 
+
+}
+
+.browse-carouselStyle{
+    height: 45vh;
+    margin: 10px;
+}
+
+.browseTitle{
+     
+    padding-top: 3.5%; 
+    font-family: "Eczar-Medium";
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fffafa;
+
+   
+   
+   
+
+}
+.browseTitle-area{
+    padding-top: 3%;
+    text-align: center;
+
+}
+
+.iconStyle{
+    width: 8%;
+   
+
 }

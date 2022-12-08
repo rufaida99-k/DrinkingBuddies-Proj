@@ -13,7 +13,6 @@ const config = {
 };
 
 const styles = {
-  bgColor: "blue",
   titleTextColor: "black",
   rowContentColor: "white",
   rowContentPaddingRight: "50px",
