@@ -12,8 +12,9 @@
     
 }
 
-.Places-Near-Me-Heading-Title, .PNM-Zipcode-H4 {
+.Places-Near-Me-Heading-Title {
   font-family: "Eczar-Medium";
+  font-size: 4rem;
 }
 
 
