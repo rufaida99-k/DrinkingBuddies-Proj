@@ -174,6 +174,7 @@ export default function HomePage() {
   const optionClick = (option) => {
     for (option of option.drinks) {
       drinks[option]++;
+
     }
     if (currQuestion + 1 < questions.length) {
       setCurrQuestion(currQuestion + 1);
@@ -181,6 +182,8 @@ export default function HomePage() {
       setDisplayResults(true);
       calculateDrink();
     }
+
+    
   };
 
   return (

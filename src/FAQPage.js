@@ -45,7 +45,9 @@ function HomePage() {
       <div className="wrapperStyle">
         <div className="divStyle">
           <h1 className="FAQ-Heading"> Frequently Asked Questions </h1>
-          <hr />
+          <br></br>
+          <br></br>
+          <hr/>
           <div className="buttonStyle">
             <button
               className="faq-buttonStyle"

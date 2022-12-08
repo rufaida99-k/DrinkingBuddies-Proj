@@ -124,7 +124,7 @@ const CompiledPage = () => {
         {/* title of the page with icon */}
         <div className= "browseTitle-area"> 
 
-        <img className= "iconStyle" src={iconSrc} alt=""></img>
+        <img className= "iconStyles" src={iconSrc} alt=""></img>
 
          <h1 className= "browseTitle">  Browse Drinks </h1> </div>
         

@@ -98,20 +98,22 @@
     font-size: 5rem;
     font-weight: bold;
     color: #fffafa;
+   
+    
 
-   
-   
-   
+
 
 }
 .browseTitle-area{
     padding-top: 3%;
     text-align: center;
+    
 
 }
 
-.iconStyle{
-    width: 8%;
+.iconStyles{
+    height: auto;
+    width: 10%;
    
-
+ 
 }

@@ -65,7 +65,7 @@
 }
 
 .choices {
-  background-color: #B2CEFF;
+  background-color: #f09d0b   ;
   display: inline-flex;
   margin-left: 8px;
   margin-right: 8px;
@@ -77,6 +77,8 @@
   border-radius: 10px;
   cursor:pointer;
   transition: 500ms;
+  color:white;
+  /* color: #66222e ; */
 }
 
 .choices:hover {

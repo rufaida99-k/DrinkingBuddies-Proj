@@ -22,7 +22,7 @@ export default function NavBar() {
             <Link className = "linksStyle" to="/quiz"> Quiz </Link>
           </li>
           <li>
-              <Link className = "linksStyle" to="/list"> Alcohol</Link>
+              <Link className = "linksStyle" to="/list"> Browse</Link>
           </li>
           <li>
             <Link className = "linksStyle" to="/places"> Places Near Me </Link>
