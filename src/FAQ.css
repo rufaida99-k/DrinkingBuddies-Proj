@@ -1,50 +1,137 @@
-.faq-buttonStyle {
+:root {
+  --pink: #ddaaa5;
+  --red: #66222e;
+  --yellow: #f09d0b;
+}
+@font-face {
+  font-family: "Eczar-Medium";
+  src: local("Eczar-Medium"),
+  url("./fonts/Eczar-Medium.ttf") format("truetype");
+}
+
+.FAQ-Heading {
+  font-family: "Eczar-Medium";
+  color: var(--red);
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.divStyle  {                        /* being used for main Frequently Asked Questions Div*/
+  height: 40vh;
+  background-color:var(--pink);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.faq-buttonStyle {        /* being used for 4 buttons under FAQ */
   margin: 0 auto;
-  display: block;
-  width: 20%;
-  padding: 2%;
-  /* background-color: #e3d7ff;  */
-  /* favorite background-color: #9d5450; */
-  background-color: #9ac1f5;
-  /* background-color: #ffffff; */
-  /* color: rgb(150, 123, 171); */
+  padding: 1.5%;
+  border-radius: 20px;
+  background-color: var(--red);
   color: white;
   text-align: center;
   border-style: none;
   font-family: "Eczar-Medium";
-  font-size: 30px;
-  z-index: 1;
+  font-size: 1.4rem;
   align-items: center;
 }
 
-.faq-buttonStyle:hover {
-  background-color: #f6c28b;
-  color: #fffafa;
-  text-decoration: underline;
+.faq-buttonStyle:hover {       /* being used for 4 buttons under FAQ */
+  background-color: var(--yellow);
+  color: black;
+  text-decoration: none;
+  transition: 500ms;
 }
 
 .faq-buttonStyle-selected {
   margin: 0 auto;
-  display: block;
-  width: 20%;
   padding: 2%;
-  font-size: 30px;
-  background-color: #f6c28b;
-  color: #fffafa;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
   text-align: center;
   border-style: none;
   font-family: "Eczar-Medium";
-  z-index: 1;
   align-items: center;
-  text-decoration: underline;
+  text-decoration: none;
+  font-size: 1.4rem;
 }
 
-.faqStyle {
-  margin: 50px;
+ .pageStyle  {
+  background-color:var(--pink);
 }
 
-/* .newPageStyle{
-  background-color: #FBAB7E;
-  background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+ .faqContainer  {         /* holds each question type - general question, heading, etc */
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
-} */
+.titleContainer  {                /* text for question heading */
+  display: flex;
+  align-items: flexStart;
+  color: black;
+  font-size: 2.2rem;
+
+}
+
+.faqStyle  {                          /* changes size of the question-answer box */
+  border-radius: 30px;
+  padding: 10px;
+  width: 50%;
+  background-color: var(--red);
+  margin: 55px;
+}
+
+ .buttonStyle  {        /* controls button dimensions */
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 80vw;
+}
+
+ .imgStyle  {
+  height: 30vh;
+  margin-top:1%;
+}
+
+ .iconStyle  {
+  height: 30px;
+  margin-left: 10px;
+}
+
+ .wrapperStyle  {
+  padding: 40px;
+}
+
+.styles_faq-row-wrapper__3vA1D .styles_faq-row__2YF3c {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: var(--red);
+}
+
+.styles_faq-row-wrapper__3vA1D .styles_row-body__1NvUo .styles_faq-row__2YF3c .styles_row-title__1YiiY {    /* QUESTION DIV */
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  align-items: center;
+  font-weight: 100;
+  font-family: "Eczar-Medium";
+}
+
+.styles_faq-row-wrapper__3vA1D .styles_row-body__1NvUo .styles_faq-row__2YF3c .styles_row-content__QOGZd .styles_row-content-text__2sgAB {    /* ANSWER DIV */
+  color: white;
+  font-family: "Eczar-Medium";
+  font-size: var(--row-content-text-size, medium);
+  padding: var(--row-content-padding-top, 0) var(--row-content-padding-right, 0) var(--row-content-padding-bottom, 0) var(--row-content-padding-left, 0);
+}

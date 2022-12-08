@@ -100,10 +100,12 @@ function App() {
         <div className="PNM-HEADING-TITLE">
           <h1 className="Places-Near-Me-Heading-Title"> Places Near Me </h1>
         </div>
+        <br></br>
         <div className="cabbyAnimation-Div" align="center">
           <img src={cabbyAnimation} style={{borderRadius: "20px"}}  alt="Taxi Animation"></img>
         </div>
         <br />
+        <br></br>
         <h4 className="PNM-Zipcode">Enter Your Zipcode Below To Find Bars Near You!</h4>
           <br />
         <form style={{width: "40%" }} onSubmit={handleSubmit}>

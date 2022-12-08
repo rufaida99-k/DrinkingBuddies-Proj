@@ -13,7 +13,8 @@
     font-family: "Eczar-Medium";
     width: 100vw;
     height: 100vh;
-    padding-bottom: 100px;
+    padding-bottom: 60%;
+    padding-top: 25%;
 }
 
 .quizLoaderButton {
