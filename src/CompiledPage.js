@@ -1,6 +1,5 @@
-// import React, { Component } from 'react';
+
 import Carousel from "react-material-ui-carousel";
-// import { Paper } from "@mui/material";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import "./compiledPg.css";
@@ -32,54 +31,7 @@ async function GetCocktailsById(id1, id2, id3,id4,id5,id6,id7,id8,id9,id10) {
   return finalResults;
 }
 
-// async function GetCocktailsInfo(type) {
-//   let url =
-//     "https://en.wikipedia.org/w/api.php?action=opensearch&search=" +
-//     type +
-//     "&limit=1&namespace=0&format=json";
-//   let result = await axios({ method: "get", url: url, withCredientals: false });
-//   return result.data[3][0];
-// }
 
-const divStyle = {
-  margin: "15px",
-  width: "70vh",
-  height: "65vh",
-  borderRadius: "20px",
-  borderColor: "#d2b7e5",
-  fontFamily: "Garamond",
-  fontSize: "20px",
-  backgroundColor: "#dec9e9",  
-  
-};
-const pStyle = {
-  margin: "5px",
-  textAlign: "center",
-  backgroundColor: "#dec9e9",  
-};
-
-const pageStyle = {
-  height: "100vh",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-};
-
-const carouselStyle = {
-  border: "1px solid #e5d9f2",
-  borderRadius: "10px",
-  height: "45vh",
-  margin: "10px",
-};
-
-const h1Style = {
-    fontWeight: "bolder",
-}
-
-const imgStyle = {
-  width: "120px",
-  height: "120px",
-};
 
 
 function Example(content) {
@@ -88,8 +40,8 @@ function Example(content) {
       NavButton={({ onClick, className, style, next, prev }) => {
         return (
           <Button onClick={onClick} id="buttonStyle">
-            {next && "Next"}
-            {prev && "Prev"}
+            {next && ">"}
+            {prev && "<"}
           </Button>
         );
       }}
@@ -105,18 +57,23 @@ function Example(content) {
 
 function Item(props) {
   return (
-    <div style={pStyle}>
+
+    <div className="browse-pStyle" >
+
       <h2>{props["item"].name}</h2>
+
       <p>
         {" "}
-        Main Ingredients: {props["item"].ing1}, {props["item"].ing2},{" "}
+        Ingredients: {props["item"].ing1}, {props["item"].ing2},{" "}
         {props["item"].ing3}{" "}
       </p>
-      <p>{props["item"].category}</p>
 
-      <img style={imgStyle} alt ="Associated Drink" src={props["item"].image} />
+      <img className="browse-ImgStyle" alt ="Associated Drink" src={props["item"].image} />
+
       <br />
+
     </div>
+
   );
 }
 
@@ -154,127 +111,83 @@ const CompiledPage = () => {
     return GetCocktailsById("11403","11003","11410","17210","14087","17194","17197","17180","11936","11418");
   });
 
-  /*      WIKI    */
-
-  // const { data: whiskey_wiki } = useQuery(["wiki", "whiskey"], async () => {
-  //   return GetCocktailsInfo("whiskey");
-  // });
-
-
-    // const { data: vodka_wiki } = useQuery(["wiki", "vodka_wiki"], async () => {
-  //   return GetCocktailsInfo("vodka");
-  // });
-
-
-  // const { data: rum_wiki } = useQuery(["wiki", "rum"], async () => {
-  //   return GetCocktailsInfo("rum");
-  // });
-
-
-  // const { data: tequila_wiki } = useQuery(["wiki", "tequila"], async () => {
-  //   return GetCocktailsInfo("tequila");
-  // });
-
-    // const { data: gin_wiki } = useQuery(["wiki", "gin"], async () => {
-  //   return GetCocktailsInfo("gin");
-  // });
-  
+ 
+  let iconSrc = require("./compiledList-Images/menuColor.png");
 
   return (
     <>
-      <div style={pageStyle}>
-        <div style={divStyle}>
-          
-          
-        <br />
-          <h1 style={h1Style}> Whiskey </h1>
-          <div style={carouselStyle}>{Example(whiskey ?? [])}</div>
-          <br />
+   
+     
+      
+      <div className="browsePageStyle"> 
 
-          <hr />
-          {/* <Button
-            as="a"
-            variant="outline-secondary"
-            size="lg"
-            href={whiskey_wiki}
-          >
-            Learn More
-          </Button> */}
+        {/* title of the page with icon */}
+        <div className= "browseTitle-area"> 
+
+        <img className= "iconStyle" src={iconSrc} alt=""></img>
+
+         <h1 className= "browseTitle">  Browse Drinks </h1> </div>
+        
+        
+        {/* row 1 of carousels */}
+        <div className="browseRowStyle"> 
+          <div className= "browseDivStyle"> 
+            <br />
+            <h1 className="browse-H1Style"> Whiskey </h1>
+            <div className="browse-carouselStyle" >{Example(whiskey ?? [])}</div>
+            <br />
+            <hr />
+          </div>
+            
+          <div className= "browseDivStyle">
+            <br />
+            <h1 className="browse-H1Style"> Vodka </h1>
+            <div className="browse-carouselStyle">{Example(vodka ?? [])}</div>
+            <br />
+            <hr />
+          </div>
+          
+          <div className="browseDivStyle">
+            <br />
+            <h1 className="browse-H1Style"> Rum </h1>
+            <div className="browse-carouselStyle">{Example(rum ?? [])}</div>
+            <br />
+            <hr />
+          </div> 
         </div>
-          
-        <div style={divStyle}>
-        <br />
-          <h1 style={h1Style}> Vodka </h1>
+      
+      
+        {/* row 2 of carousels  */}
+   
+        <div className="browseRowStyle"> 
 
-          <div style={carouselStyle}>{Example(vodka ?? [])}</div>
-          <br />
-          <hr />
-          {/* <Button
-            as="a"
-            variant="outline-secondary"
-            size="lg"
-            href={vodka_wiki}
-          >
-            Learn More
-          </Button> */}
+          <div className="browseDivStyle">
+            <br />
+            <h1 className="browse-H1Style"> Tequila </h1>
+            <div className="browse-carouselStyle">{Example(tequila ?? [])}</div>
+            <br />
+            <hr />
+          </div>
+
+          <div className="browseDivStyle">
+            <br />
+            <h1 className="browse-H1Style"> Bourbon </h1>
+            <div className="browse-carouselStyle">{Example(bourbon ?? [])}</div>
+            <br />
+            <hr />
+          </div>
+
+          <div className="browseDivStyle">
+            <br />
+            {<h1 className="browse-H1Style"> Gin </h1> }
+            <div className="browse-carouselStyle">{Example(gin ?? [])}</div>
+            <br />
+            <hr />
+          </div>
         </div>
-         
-        <div style={divStyle}>
-          <br />
-          <h1 style={h1Style}> Rum </h1>
-          <div style={carouselStyle}>{Example(rum ?? [])}</div>
-          <br />
 
-          <hr />
-          {/* <Button
-            as="a"
-            variant="outline-secondary"
-            size="lg"
-            href={rum_wiki}
-          >
-            Learn More
-          </Button> */}
-        </div> 
       </div>
-{       
-      <div style={pageStyle}>
-        <div style={divStyle}>
-          
-        <br />
-          <h1 style={h1Style}> Tequila </h1>
-          <div style={carouselStyle}>{Example(tequila ?? [])}</div>
-          <br />
-
-          <hr />
-          {/* <Button as="a" variant="outline-secondary" size="lg" href={gin_wiki}>
-            Learn more{" "}
-          </Button> */}
-        </div>
-
-        <div style={divStyle}>
-          <br />
-          <h1 style={h1Style}> Bourbon </h1>
-          <div style={carouselStyle}>{Example(bourbon ?? [])}</div>
-          <br />
-
-          <hr />
-          {/* <Button as="a" variant="outline-secondary" size="lg" href={rum_wiki}>
-            Learn more{" "}
-          </Button> */}
-        </div>
-        <div style={divStyle}>
-          <br />
-          {<h1 style={h1Style}> Gin </h1> }
-          <div style={carouselStyle}>{Example(gin ?? [])}</div>
-          <br />
-
-          <hr />
-          {/* <Button as="a" variant="outline-secondary" size="lg" href={beer_wiki}>
-            Learn More
-          </Button> */}
-        </div>
-      </div>
-      }
+      
     </>
   );
 };
