@@ -53,6 +53,7 @@ const wrapperStyle = {
 const styles = {
   
   bgColor: "#f6c28b",
+  
   border: "3px solid #fda0d8",
   titleTextColor: "black",
   rowTitleColor: "e3d7ff",
@@ -96,6 +97,7 @@ const titleContainer = {
 const faqStyle = {
   padding: "15px",
   backgroundColor: "#f6c28b",
+
   // border: "2px solid  #9d5450",
   borderRadius: "10px",
   color:"white",
