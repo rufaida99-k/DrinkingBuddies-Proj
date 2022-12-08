@@ -13,11 +13,9 @@ const config = {
 };
 
 const styles = {
-  titleTextColor: "black",
+  rowTitleColor: "white",
   rowContentColor: "white",
-  rowContentPaddingRight: "50px",
-  titleContentPaddingRight: "50px",
-  padding: "50px",
+  arrowColor: "white",
 };
 
 function HomePage() {
@@ -47,7 +45,7 @@ function HomePage() {
           <h1 className="FAQ-Heading"> Frequently Asked Questions </h1>
           <br></br>
           <br></br>
-          <hr/>
+          <hr />
           <div className="buttonStyle">
             <button
               className="faq-buttonStyle"
@@ -85,10 +83,14 @@ function HomePage() {
           <div className="faqContainer">
             <div className="titleContainer">
               General Questions
-              <img src={questionSign} className="iconStyle" alt="question symbol"/>
+              <img
+                src={questionSign}
+                className="iconStyle"
+                alt="question symbol"
+              />
             </div>
             <div className="faqStyle">
-              <Faq data={GeneralData} style={styles} config={config} />
+              <Faq data={GeneralData} styles={styles} config={config} />
             </div>
           </div>
         </div>
@@ -101,7 +103,7 @@ function HomePage() {
               <img src={healthSign} alt="health sign" className="iconStyle" />
             </div>
             <div className="faqStyle">
-              <Faq data={HealthData} style={styles} config={config} />
+              <Faq data={HealthData} styles={styles} config={config} />
             </div>
           </div>
         </div>
@@ -111,10 +113,14 @@ function HomePage() {
           <div className="faqContainer">
             <div className="titleContainer">
               Cocktail Questions
-              <img src={cocktailSign} alt="cocktail sign" className="iconStyle" />
+              <img
+                src={cocktailSign}
+                alt="cocktail sign"
+                className="iconStyle"
+              />
             </div>
             <div className="faqStyle">
-              <Faq data={DrinkData} style={styles} config={config} />
+              <Faq data={DrinkData} styles={styles} config={config} />
             </div>
           </div>
         </div>
