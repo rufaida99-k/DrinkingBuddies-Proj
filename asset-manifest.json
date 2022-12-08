@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/DrinkingBuddies-Proj/static/css/main.a2cadf80.css",
-    "main.js": "/DrinkingBuddies-Proj/static/js/main.2df1a2ff.js",
+    "main.js": "/DrinkingBuddies-Proj/static/js/main.ad833cb4.js",
     "static/js/787.f5547d80.chunk.js": "/DrinkingBuddies-Proj/static/js/787.f5547d80.chunk.js",
     "static/media/womenDrinking.gif": "/DrinkingBuddies-Proj/static/media/womenDrinking.1d40687ff99f180f76d0.gif",
     "static/media/drink-Animation.gif": "/DrinkingBuddies-Proj/static/media/drink-Animation.1cff3afbc870f119cb9a.gif",
@@ -32,11 +32,11 @@
     "static/media/question7.png": "/DrinkingBuddies-Proj/static/media/question7.3b720db3b420a88f41ef.png",
     "index.html": "/DrinkingBuddies-Proj/index.html",
     "main.a2cadf80.css.map": "/DrinkingBuddies-Proj/static/css/main.a2cadf80.css.map",
-    "main.2df1a2ff.js.map": "/DrinkingBuddies-Proj/static/js/main.2df1a2ff.js.map",
+    "main.ad833cb4.js.map": "/DrinkingBuddies-Proj/static/js/main.ad833cb4.js.map",
     "787.f5547d80.chunk.js.map": "/DrinkingBuddies-Proj/static/js/787.f5547d80.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a2cadf80.css",
-    "static/js/main.2df1a2ff.js"
+    "static/js/main.ad833cb4.js"
   ]
 }
