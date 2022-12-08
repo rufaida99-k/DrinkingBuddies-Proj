@@ -162,17 +162,21 @@
 
   
 .howItWorks-text{
-    padding-top: 5%;
+    padding-top: 15%;
     font-family:"Eczar-Medium";
-    font-size: 1.5rem;
+    font-size: 1.0rem;
     color: #66222e;
+    text-align: left;
+    padding-left: 10%;
+    padding-right: 10%;
+    
 }
 
 .img-howItWorks{
     align-items: center;
     width: 20%;
     padding-bottom: 5%;
-  }
+}
 
 
 .HIW-Glass1 {
@@ -191,6 +195,7 @@
     justify-content: center;
     margin-top: 10px;
     padding-bottom: 100px;
+    
 }
 
 .HIW-Glass2 {
@@ -228,6 +233,13 @@
     margin-top: 16px;
     padding-bottom: 100px;
 }
+
+/* 
+.briefDescription-text{
+    text-align: center;
+    padding-top: 2%;
+
+} */
 
 
 /* Smaller screen size */

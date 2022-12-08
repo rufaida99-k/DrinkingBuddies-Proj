@@ -46,9 +46,10 @@ export default function HomePage() {
             <img className="img-howItWorks" src={quizGuide} alt=""></img>
             <br></br>
             <div className="HIW-Glass1">
-              <p className="howItWorks-text"> Take the drinking quiz </p>
+              {/* <p className = "briefDescription-text"> DB offers a quiz to help you decide which drink to pick to kick-off your (safe) drinking journey!</p> */}
+              <p className="howItWorks-text"> DB offers a <b>quiz</b> to help you decide which drink to order or make to kick-off your (safe) drinking journey! You will have the possibility of getting 1 of 6 drinks. Find out which drink you are with our quiz.</p>
               <Link className="quiz-buttonLinkStyle" to="/quiz">
-                <br></br>
+          
                 <br></br>
                 <button
                   className="quiz-buttonStyle2"
@@ -63,9 +64,9 @@ export default function HomePage() {
             <img className="img-howItWorks" src={bacGuide} alt=""></img>
             <br></br>
             <div className="HIW-Glass2">
-              <p className="howItWorks-text"> Calculate your BAC </p>
+              <p className="howItWorks-text">  Blood Alcohol Content <b>(BAC)</b> refers to the percentage of alcohol in a person's bloodstream. Using the Widmark's formula, we are able to calculate your BAC to ensure that you are drinking within your health limits.  </p>
               <Link className="quiz-buttonLinkStyle" to="/bac">
-                <br></br>
+           
                 <br></br>
                 <button
                   className="quiz-buttonStyle2"
@@ -80,15 +81,15 @@ export default function HomePage() {
             <img className="img-howItWorks" src={faqGuide} alt=""></img>
             <br></br>
             <div className="HIW-Glass3">
-              <p className="howItWorks-text"> Have Questions? Visit FAQ </p>
+              <p className="howItWorks-text"> If you have any specific questions about alcohol, you will find your answers at our <b> FAQ center.</b>  Also refer to our <b>help center </b> for more presseng questions about alcoholism or you need a safe drive back home.  </p>
               <Link className="quiz-buttonLinkStyle" to="/faq">
-                <br></br>
+             
                 <br></br>
                 <button
                   className="quiz-buttonStyle2"
                   style={{ borderRadius: "20px" }}
                 >
-                  Read FAQ
+                  FAQ
                 </button>
               </Link>
             </div>
